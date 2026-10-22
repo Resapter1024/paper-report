@@ -1,0 +1,33 @@
+# LaTeX intermediate files
+*.aux
+*.log
+*.out
+*.toc
+*.nav
+*.snm
+*.fls
+*.fdb_latexmk
+*.synctex
+*.synctex.gz
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*.vrb
+
+# Caches and temporary output
+__pycache__/
+*.py[cod]
+tmp/
+temp/
+work/
+output/
+
+# Local credentials and environment
+.env
+.env.*
+!.env.example
+
+# Operating-system files
+.DS_Store
+Thumbs.db

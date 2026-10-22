@@ -1,0 +1,46 @@
+\documentclass[11pt,aspectratio=43]{beamer}
+\input{../report-metadata.tex}
+\usepackage{report-style}
+\title[\ReportShortTitle]{\ReportTitle}
+\subtitle{\ReportEnglishTitle}
+\author[\ReportSourceAuthors]{\ReportPresenterDisplay}
+\institute[\ReportShortContext]{\ReportContext}
+\date{\ReportSourceLine}
+\begin{document}
+\begin{frame}\titlepage\end{frame}
+
+% Replace these explicitly labeled layout examples with the actual report.
+\section{研究思路}
+\begin{frame}{重复测量能减少随机误差（版式示例）}
+固定同一个测量对象的真实值 $\mu$，重复测量 $m$ 次：
+\[
+Y_t=\mu+\epsilon_t,\qquad
+\mathbb E(\epsilon_t)=0,\quad
+\operatorname{Var}(\epsilon_t)=\sigma^2.
+\]
+不同次测量的误差相互独立。取平均得到
+\[
+\overline Y_m=\frac1m\sum_{t=1}^mY_t,\qquad
+\operatorname{Var}(\overline Y_m)=\frac{\sigma^2}{m}.
+\]
+{\color{reportaccent}\bfseries 同一对象的多次记录共同提高测量精度。}
+\end{frame}
+
+\begin{frame}{平均后的误差方差随测量次数下降（版式示例）}
+设单次测量误差方差为1，由公式计算：
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{ccc}
+\toprule
+测量次数 $m$ & 平均后的误差方差 & 相对单次测量\\
+\midrule
+1 & 1 & 100\%\\
+4 & 0.25 & 25\%\\
+\bottomrule
+\end{tabular}
+\end{center}
+\medskip
+每次测量都包含独立的随机误差；取平均后，误差的方差降低。\\
+这是公式的示例计算，尚未涉及真实数据。
+\end{frame}
+\end{document}

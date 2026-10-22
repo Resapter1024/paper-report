@@ -1,0 +1,4 @@
+interface:
+  display_name: "论文与研究报告汇报"
+  short_description: "规划、写作、润色与检查研究汇报，内置成功版式、配对范例及讲稿"
+  default_prompt: "Use $paper-report to plan, draft, polish, check, or export my academic presentation using the bundled style and slide-and-speech examples, adapting it to my source materials and audience."

@@ -1,0 +1,23 @@
+% Reusable with a supplied Beamer theme; input in the preamble after the theme.
+\RequirePackage{etoolbox}
+\providecommand{\ReportPresenter}{}
+\providecommand{\ReportPresenterDisplay}{%
+  \ifdefempty{\ReportPresenter}{\textcolor{gray}{报告人待填写}}{\ReportPresenter}}
+\setbeamertemplate{title page}{%
+  \vbox{}\vfill
+  \begin{beamercolorbox}[wd=\textwidth,sep=9pt,center]{title}
+    {\usebeamerfont{title}\inserttitle\par}
+    \ifx\insertsubtitle\empty\else
+      \vskip.35em{\usebeamerfont{subtitle}\insertsubtitle\par}
+    \fi
+  \end{beamercolorbox}
+  \vskip1.1em
+  \begin{center}
+    {\usebeamerfont{author}\ReportPresenterDisplay\par}
+    \vskip.7em
+    {\usebeamerfont{institute}\insertinstitute\par}
+    \vskip1em
+    {\usebeamerfont{date}\insertdate\par}
+  \end{center}
+  \vfill
+}

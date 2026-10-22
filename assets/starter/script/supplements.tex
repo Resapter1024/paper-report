@@ -1,0 +1,27 @@
+% Authoritative supplemental body for both layouts.
+% Example page mapping: 1->1, 2->3, 3->4; physical page 2 is navigation.
+\begin{ReportSlide}{1}{1}{研究报告标题}{本页约15秒}
+这份示例用重复测量说明怎样把一个公式放进报告，并用补充内容解释其中的计算。下面所有数值都由公式直接给出，不代表实际研究数据。
+\end{ReportSlide}
+
+\begin{ReportSlide}{2}{3}{重复测量能减少随机误差}{本页约1分钟}
+考虑同一个测量对象，它的真实值是$\mu$。实际测量会受到随机误差影响，所以每次记录为$Y_t=\mu+\epsilon_t$。这里先假定误差均值为零，各次测量的误差相互独立，而且方差相同。
+
+如果只测量一次，误差方差就是$\sigma^2$。测量$m$次后取平均，真实值仍然是$\mu$，而误差变成这$m$项误差的平均：
+\[
+\overline Y_m=\mu+\frac1m\sum_{t=1}^m\epsilon_t.
+\]
+由于误差相互独立，求和时各项协方差为零，因此
+\[
+\operatorname{Var}(\overline Y_m)
+=\frac{1}{m^2}\sum_{t=1}^m\operatorname{Var}(\epsilon_t)
+=\frac{\sigma^2}{m}.
+\]
+这说明在这些条件下，多测几次再取平均，可以降低随机误差。接下来用具体的测量次数看下降了多少。
+\end{ReportSlide}
+
+\begin{ReportSlide}{3}{4}{平均后的误差方差随测量次数下降}{本页约40秒}
+表中把单次测量的误差方差设为1。只测一次时，方差仍为1；测四次再取平均，按前面的公式得到$1/4=0.25$，是原来的四分之一。
+
+这里比较的是平均值的误差方差。每次测量本身没有变得更准确，降低来自把四次相互独立的误差取平均。表中的数值由这一公式计算，说明的是公式的含义。
+\end{ReportSlide}

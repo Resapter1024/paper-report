@@ -1,0 +1,51 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{guide-style}[2026/10/22 Shared supplemental speaker script]
+\newif\ifReportGuideWithSlides
+\ReportGuideWithSlidestrue
+\DeclareOption{textonly}{\ReportGuideWithSlidesfalse}
+\ProcessOptions\relax
+\RequirePackage{amsmath,amssymb,graphicx,xcolor,fancyhdr,hyperref,needspace}
+\ifReportGuideWithSlides
+  \RequirePackage[a4paper,left=15mm,right=15mm,top=12mm,bottom=14mm]{geometry}
+  \setlength{\parskip}{7pt}
+  \linespread{1.16}
+\else
+  \RequirePackage[a4paper,left=18mm,right=18mm,top=18mm,bottom=18mm]{geometry}
+  \setlength{\parskip}{5pt}
+  \linespread{1.12}
+\fi
+\definecolor{reportaccent}{RGB}{151,31,48}
+\definecolor{reportmuted}{RGB}{95,95,95}
+\providecommand{\ReportSlidesPDF}{../slides/report.pdf}
+\hypersetup{pdftitle={\ReportShortTitle·讲稿},hidelinks}
+\pagestyle{fancy}\fancyhf{}
+\fancyfoot[L]{\fontsize{9}{11}\selectfont\color{reportmuted}讲稿}
+\newcommand{\ReportCurrentGuideSlide}{}
+\fancyfoot[R]{\fontsize{9}{11}\selectfont\color{reportmuted}%
+  \ifReportGuideWithSlides Slides 第\ReportCurrentGuideSlide 页\else\thepage\fi}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{7mm}
+\setlength{\parindent}{0pt}
+\setlength{\abovedisplayskip}{6pt}\setlength{\belowdisplayskip}{6pt}
+\setlength{\abovedisplayshortskip}{4pt}\setlength{\belowdisplayshortskip}{4pt}
+\clubpenalty=10000\widowpenalty=10000\displaywidowpenalty=10000
+\raggedbottom
+\newcounter{ReportGuideSlide}
+% Args: displayed number, physical PDF page, title, timing metadata (may be empty).
+\NewDocumentEnvironment{ReportSlide}{m m m m}{%
+  \ifnum\value{ReportGuideSlide}>0
+    \ifReportGuideWithSlides\clearpage\else\par\addvspace{8pt}\fi
+  \fi
+  \stepcounter{ReportGuideSlide}
+  \gdef\ReportCurrentGuideSlide{#1}
+  \pdfbookmark[1]{Slides 第#1页：#3}{slide.#1}
+  \ifReportGuideWithSlides
+    \noindent\includegraphics[page=#2,width=\textwidth]{\ReportSlidesPDF}\par
+    \vspace{2mm}{\color{reportaccent}\hrule height .5pt}\vspace{3mm}
+    {\fontsize{10}{12}\selectfont\color{reportmuted}第#1页\quad 补充叙述\quad #4}\par\vspace{1mm}
+  \else
+    \Needspace{5\baselineskip}
+    \noindent\textbf{Slides 第#1页}\par\nobreak\vspace{2pt}
+  \fi
+}{\par}

@@ -1,0 +1,61 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{report-style}[2026/10/22 Portable academic report style]
+\RequirePackage[UTF8,fontset=fandol]{ctex}
+\RequirePackage{amsmath,amssymb,booktabs,graphicx,etoolbox}
+\IfFontExistsTF{KaiTi}
+  {\setCJKfamilyfont{reportkai}[AutoFakeBold=2]{KaiTi}}
+  {\setCJKfamilyfont{reportkai}[AutoFakeBold=2]{FandolKai-Regular}}
+\AtBeginDocument{\CJKfamily{reportkai}}
+\definecolor{reportaccent}{RGB}{151,31,48}
+\useoutertheme[footline=authorinstitutetitle,subsection=false]{smoothbars}
+\useinnertheme{circles}
+\setbeamercolor{structure}{fg=reportaccent}
+\setbeamercolor{palette primary}{fg=white,bg=reportaccent}
+\setbeamercolor{palette secondary}{fg=white,bg=reportaccent!75!black}
+\setbeamercolor{palette tertiary}{fg=white,bg=reportaccent!50!black}
+\setbeamercolor{palette quaternary}{fg=white,bg=reportaccent!50!black}
+\setbeamercolor{title}{fg=white,bg=reportaccent}
+\setbeamercolor{frametitle}{fg=white,bg=reportaccent}
+\setbeamercolor{author in head/foot}{fg=white,bg=reportaccent}
+\setbeamercolor{title in head/foot}{fg=white,bg=reportaccent!60!black}
+\setbeamerfont{title}{size=\Large,series=\mdseries}
+\setbeamerfont{subtitle}{size=\normalsize,series=\mdseries}
+\setbeamerfont{author}{size=\normalsize}
+\setbeamerfont{institute}{size=\small}
+\setbeamerfont{date}{size=\normalsize}
+\setbeamerfont{frametitle}{size=\large}
+\setbeamersize{text margin left=.65cm,text margin right=.65cm}
+\setlength{\parskip}{3pt}
+\setlength{\tabcolsep}{4pt}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{headline}{%
+  \begin{beamercolorbox}[ht=2.25ex,dp=3.75ex]{section in head/foot}
+    \insertnavigation{\paperwidth}
+  \end{beamercolorbox}}
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip
+  \begin{beamercolorbox}[wd=\paperwidth,leftskip=.3cm,rightskip=.3cm]{frametitle}
+    \vskip.5ex\usebeamerfont{frametitle}\strut\insertframetitle\strut\par\vskip.2ex
+  \end{beamercolorbox}}
+\setbeamertemplate{footline}{%
+  \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm]{author in head/foot}
+    \usebeamerfont{author in head/foot}\insertshortauthor\hfill
+    \usebeamerfont{institute in head/foot}\insertshortinstitute
+  \end{beamercolorbox}
+  \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm]{title in head/foot}
+    \usebeamerfont{title in head/foot}\insertshorttitle\hfill
+    \insertframenumber\,/\,\inserttotalframenumber
+  \end{beamercolorbox}}
+\AtBeginSection[]{%
+  \begingroup
+  \setbeamertemplate{footline}{}
+  \begin{frame}[noframenumbering]{报告目录}
+    \tableofcontents[currentsection,sectionstyle=show/shaded,subsectionstyle=hide]
+  \end{frame}
+  \endgroup}
+\AtBeginSubsection[]{}
+\AtBeginDocument{%
+  \ifdefempty{\ReportBackground}{}{%
+    \setbeamertemplate{background}{%
+      \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{\ReportBackground}}}}
+\input{report-cover.tex}
