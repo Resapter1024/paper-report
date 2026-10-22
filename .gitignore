@@ -9,25 +9,39 @@
 *.fdb_latexmk
 *.synctex
 *.synctex.gz
+*.synctex(busy)
+*.synctex.gz(busy)
 *.bbl
 *.blg
 *.bcf
 *.run.xml
 *.vrb
+*.xdv
+*.dvi
 
-# Caches and temporary output
+# Caches and local build output
 __pycache__/
 *.py[cod]
-tmp/
-temp/
-work/
-output/
+/.cache/
+/tmp/
+/temp/
+/work/
+/build/
+/output/
 
 # Local credentials and environment
 .env
 .env.*
 !.env.example
 
-# Operating-system files
+# Editor backups and operating-system files
+*.bak
+*.tmp
+*.swp
+*.swo
+*~
 .DS_Store
 Thumbs.db
+Desktop.ini
+
+# Keep TeX/Bib sources and PDF/image examples trackable.
