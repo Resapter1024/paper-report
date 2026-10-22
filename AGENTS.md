@@ -1,7 +1,7 @@
 # 开发约定
 
 - 本仓库是 paper-report skill 的开发源。所有后续开发在这里进行，安装入口应链接到本仓库，不维护另一份独立开发副本。
-- 修改前阅读 SKILL.md 和受影响的 references/ 文件；保持 plan、draft、polish、check、export 的功能与文档一致。
+- 修改前阅读 SKILL.md 和受影响的 references/ 文件；保持 plan、draft、polish、check、export、questions 的功能与文档一致。
 - 统一使用“讲稿”这个名称，保留按页补充 Slides、面向未读过材料的听众进行讲述的形式。
 - 修改模板时尊重用户模板的明确要求，保留报告人等待用户输入的规则；不在 Slides 内容中使用 block、alertblock、exampleblock。
 - 保持相对路径，不依赖原报告目录或特定机器。不要将个人信息、原论文全文、凭据、未获授权的字体或机构标志加入发布包。

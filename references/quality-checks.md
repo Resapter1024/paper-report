@@ -86,11 +86,17 @@ Pay attention to inserted pages, removed sections, automatically split frames, a
 
 ## Final rehearsal and questions
 
-When requested or useful, prepare likely questions from the final slides and narration. Assume listeners have not read the underlying paper or report.
+Use this section for $paper-report questions, natural-language requests for likely audience questions, and requested Q&A rehearsal. Work from the current slides and actual speaker script, including an unfinished draft when that is what the user supplies. Inspect existing project files before requesting them. If only one artifact is available, use it and state the coverage; if neither is available, request the presentation materials rather than inventing a talk from the paper.
 
-Prioritize questions the presentation itself invites: why this approach is needed, what its assumptions mean, how the procedure works, what the evidence supports, and where it may fail. Match the questions to the audience rather than producing an exhaustive generic examination.
+Use the audience background already agreed for the report. When unspecified, assume classmates who have heard the talk but have not read the source and do not have deep knowledge of the paper or related field. Do not restart planning for an otherwise self-contained questions request.
 
-Give a short oral answer first, then optional technical detail and relevant limits. Verify consequential answers against the available source or analysis. Do not automatically insert these answers into the talk or expand the required deliverables.
+Follow the presentation's sequence and identify questions prompted by a visible claim, example, equation, figure, or spoken explanation. Questions may connect several pages or return to an earlier claim; never require the listener to know a result, appendix, or specialist term available only in the source or study notes. The source may be consulted to verify an answer, but must not supply assumed listener knowledge.
+
+Prioritize plausible questions about meaning, motivation, assumptions, how a procedure works, interpreting evidence, or applying a stated result. A skeptical follow-up is appropriate when the talk itself invites it. Avoid a generic examination, leading questions that advertise the method, and forced technical objections. Explain an unfamiliar object in ordinary language within a question when needed; do not manufacture questions by pretending a clear explanation was absent.
+
+By default, return a concise numbered list of questions in the conversation. For each, include the displayed slide number/title (or a clearly labeled physical PDF page when no slide mapping is available) and a brief reason tied to what the listener saw or heard. Select the number and depth to suit the talk, covering likely points of confusion and substantive follow-ups without padding. Do not provide answers unless requested. Do not edit slides or scripts, or save a separate question file, unless the user asks.
+
+When answers are requested, give a short oral answer first, then optional technical detail and relevant limits. Verify consequential answers against the available source or analysis, distinguish supported conclusions from conjecture, and use accessible language. Save Q&A in notes when requested; do not automatically insert it into the talk.
 
 ## Final handoff
 

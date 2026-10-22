@@ -1,11 +1,13 @@
 ---
 name: paper-report
-description: Plan, draft, polish, check, or export an academic presentation from a research paper, self-authored report, or course materials. Includes a portable Beamer style, focused planning questions, paired slide-and-speech examples, supplemental speaker scripts, and research-aware language review.
+description: Plan, draft, polish, check, export, or prepare audience questions for an academic presentation from a research paper, self-authored report, or course materials. Includes a portable Beamer style, focused planning questions, paired slide-and-speech examples, supplemental speaker scripts, and research-aware language review.
 ---
 
 # Paper and Research Report
 
-Prepare a presentation the audience can understand without reading its source. A full package has slides, a slide-aligned speaker script (讲稿), and study/preparation notes. The guide replaces a separate read-aloud manuscript. For a narrow request, produce only the requested work.
+Prepare a presentation the audience can understand without reading its source. A full package has report (slides for display), script (a slide-aligned speaker script, 讲稿), and notes (study notes developing the concepts and reasoning behind both). The guide replaces a separate read-aloud manuscript. For a narrow request, produce only the requested work.
+
+Use drafting, revision, and rehearsal to help the presenter learn the material and deepen their understanding. Deliver a usable, checked draft, then refine report and script through the user's questions and practice; do not promise a flawless finished talk in one generation.
 
 ## Task entry points
 
@@ -18,6 +20,7 @@ Recognize these as task arguments, or infer the same intent from ordinary langua
 | $paper-report polish | Revise the requested language, unnecessary defensive statements, and mixing of visible content, speech, and preparation instructions. Read [language-review.md](references/language-review.md), consult relevant style pairs, and preserve technical content. |
 | $paper-report check | Inspect without changing report files. Read the applicable language and quality checks; report concrete page locations and proposed corrections. |
 | $paper-report export | Generate requested layouts from the authoritative supplemental content. Read the format and synchronization sections of [deliverables.md](references/deliverables.md). |
+| $paper-report questions | Generate likely audience questions from the current slides and speaker script, with slide locations and reasons. Read [Final rehearsal and questions](references/quality-checks.md#final-rehearsal-and-questions). Do not assume listeners have read the source or have deep subject knowledge; provide answers only when requested. |
 
 Without an argument, infer the task. For a new report with consequential unknowns, begin with planning. For an authorized draft or targeted revision with a settled brief, continue without reopening every planning question.
 

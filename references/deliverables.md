@@ -93,11 +93,11 @@ The text-only root uses the same supplements with 11pt type, bold slide-number l
 
 ## Preparation notes and language layers
 
-Slides contain what the audience sees. The speaker script contains speech. Preparation notes contain full derivations, source checks, editorial choices, reminders, timing decisions, and optional answers.
+Slides (report) contain what the audience sees. The speaker script (script) contains the speech that explains and connects those slides. Study notes (notes) develop the concepts, assumptions, derivations, and background needed to understand both; they may also contain source checks, editorial choices, reminders, timing decisions, and optional answers.
 
 Keep these layers distinct using [language-review.md](language-review.md). Preserve true qualifications; avoid inserting each unresolved editorial concern as a generic audience-facing disclaimer.
 
-The notes support the presenter's understanding rather than duplicating the guide. Include relevant definitions, design choices, alternative explanations, computations, and background. Cross-reference stable slide identities and sources; do not require a model, theorem, or simulation section in every report.
+The notes support the presenter's deeper understanding rather than duplicating the guide or serving only as a task checklist. Include relevant definitions, design choices, alternative explanations, computations, and background. Cross-reference stable slide identities and sources; do not require a model, theorem, or simulation section in every report.
 
 ## Mapping, terminology, and timing
 
