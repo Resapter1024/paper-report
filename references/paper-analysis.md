@@ -1,6 +1,6 @@
 # Reading and argument mapping
 
-Use this reference while reading source materials, choosing the report's central message, or checking a technical explanation.
+Use this reference while reading source materials, planning/drafting a report, or answering a requested technical question. It is not part of the language-only check mode.
 
 ## Establish the source and the presenter's role
 
@@ -10,11 +10,17 @@ For someone else's paper, distinguish the authors' claims from the presenter's i
 
 A supplied report establishes scope and intended claims, but does not independently prove every assertion. Trace important results to available equations, proofs, analysis outputs, data descriptions, or primary citations. Mark material gaps without inventing evidence. Do not replace the supplied work with a different study because an expected component is absent.
 
-Record the audience's actual prerequisites. Mathematical maturity does not imply familiarity with the paper's notation or research setting. Use a concrete example when it helps establish the objects, then state the formal setting and the example's limits.
+Record the audience's actual prerequisites. Mathematical maturity does not imply familiarity with the paper's notation or research setting. Explain the objects at their original point of introduction, using the source's own examples when available.
+
+## Narrative and example boundaries
+
+Keep the relative order of the source's sections and the concepts, arguments, examples, formulas, figures, and results selected from them. Shortening a section, splitting a dense page, or merging adjacent material must preserve this order. Only a specific user request authorizes a different sequence. Do not move a later application or construct a new example to manufacture an opening. For several unordered sources, settle the primary source/order from the user's brief before drafting.
+
+For each slide example, identify its actual source location or the user's specific request. Do not create a scenario, substitute convenient numbers, specialize a general parameter (for example, set a general mu to zero), or change a hypothesis merely to make a new teaching example. Mathematical correctness and a “for clarity” label do not authorize such additions. The source's own examples remain usable in their original context, with their conditions intact. Additional learning illustrations can be developed in conversation or notes, clearly labeled, and must not migrate into the talk automatically.
 
 ## Build a compact source map
 
-Preserve the source structure in the reading map for traceability; construct the presentation structure separately.
+Use the source map to preserve both traceability and narrative order in the presentation. Record the corresponding source location for every substantive slide.
 
 | Field | What to record |
 |---|---|
@@ -34,7 +40,7 @@ A course report can make a useful argument through a careful design, reproductio
 
 ## Select evidence to serve the argument
 
-For each candidate section or result, ask what central claim it supports and what the audience needs in order to understand it. Omit material with no necessary role in this report.
+For each candidate section or result, ask what central claim it supports and what the audience needs in order to understand it. Omit material outside the agreed scope while retaining the original order of what remains.
 
 For a method-focused talk:
 

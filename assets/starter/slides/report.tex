@@ -1,4 +1,5 @@
-\documentclass[11pt,aspectratio=43]{beamer}
+% !TeX program = xelatex
+\documentclass[c,11pt,aspectratio=43]{beamer}
 \input{../report-metadata.tex}
 \usepackage{report-style}
 \title[\ReportShortTitle]{\ReportTitle}
@@ -7,40 +8,37 @@
 \institute[\ReportShortContext]{\ReportContext}
 \date{\ReportSourceLine}
 \begin{document}
-\begin{frame}\titlepage\end{frame}
+\begin{frame}[c]\titlepage\end{frame}
 
-% Replace these explicitly labeled layout examples with the actual report.
-\section{研究思路}
-\begin{frame}{重复测量能减少随机误差（版式示例）}
-固定同一个测量对象的真实值 $\mu$，重复测量 $m$ 次：
+% The first section must immediately follow the cover: its hook makes PDF page 2
+% the clickable contents page. Do not add another outline or contents frame.
+% Layout slots only: replace with actual source content in its narrative order.
+% Do not turn these placeholders into a new motivating example.
+\section{原文第一节（占位）}
+\begin{frame}[c]{原文概念（排版占位）}
+{\color{reportaccent}\bfseries 原文对象与定义}
+
+待从原文对应位置填入对象、符号和定义，保留原有引入顺序。
 \[
-Y_t=\mu+\epsilon_t,\qquad
-\mathbb E(\epsilon_t)=0,\quad
-\operatorname{Var}(\epsilon_t)=\sigma^2.
+\underbrace{\cdots}_{\text{原文公式占位}}
 \]
-不同次测量的误差相互独立。取平均得到
-\[
-\overline Y_m=\frac1m\sum_{t=1}^mY_t,\qquad
-\operatorname{Var}(\overline Y_m)=\frac{\sigma^2}{m}.
-\]
-{\color{reportaccent}\bfseries 同一对象的多次记录共同提高测量精度。}
+本页仅演示文字与公式的位置，不提供研究内容或自创例子。
 \end{frame}
 
-\begin{frame}{平均后的误差方差随测量次数下降（版式示例）}
-设单次测量误差方差为1，由公式计算：
+\section{原文后续节（占位）}
+\begin{frame}[c]{原文结果（排版占位）}
+待从原文对应位置填入指标、比较对象与结果。
 \begin{center}
 \renewcommand{\arraystretch}{1.3}
 \begin{tabular}{ccc}
 \toprule
-测量次数 $m$ & 平均后的误差方差 & 相对单次测量\\
+原文指标 & 原文比较对象 & 原文结果\\
 \midrule
-1 & 1 & 100\%\\
-4 & 0.25 & 25\%\\
+待填 & 待填 & 待填\\
 \bottomrule
 \end{tabular}
 \end{center}
 \medskip
-每次测量都包含独立的随机误差；取平均后，误差的方差降低。\\
-这是公式的示例计算，尚未涉及真实数据。
+本页仅演示表格排版，不代表任何研究结论。
 \end{frame}
 \end{document}

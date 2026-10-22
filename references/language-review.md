@@ -1,15 +1,23 @@
 # Language review for slides and speech
 
-Read for polish, check, and the final pass of draft. The goal is accurate, natural explanation with enough content for listeners to follow.
+Read for polish, check, and the language pass of draft. Preserve the author's meaning while removing AI-like wording, unnecessary defensive statements, and preparation/chat language mixed into the presentation.
+
+## Scope and mode
+
+Check is a read-only language audit of every requested page, not a general report review. Inspect formulaic AI phrasing, filler and inflated claims, unnecessary defensive wording, instruction/chat residue, awkward oral language, inconsistent terminology, and sentence-style slide titles. Judge wording in its local context; a single word or detector score is not proof of AI authorship.
+
+Do not assess content selection, chapter/slide order, emphasis, missing results or derivations, technical correctness, layout, timing, or PDF compatibility under check. Do not suggest moving, adding, deleting, splitting, or merging sections/pages. A useful suggestion outside that scope still belongs in a separately requested review, not in the language-audit findings. In particular, do not read quality-checks.md or run the PDF checker as part of check.
+
+Polish applies authorized wording edits with the same content-preservation boundary. Draft uses these rules while writing. The broader artifact acceptance checks belong to draft/export or an explicitly requested broader review.
 
 ## Process
 
-1. Read each slide beside its supplement and the relevant source. Identify whether a sentence belongs to visible content, actual speech, or preparation.
+1. Read every requested slide and its corresponding supplement. Identify whether a sentence belongs to visible content, actual speech, or preparation. Use the supplied text as context; do not turn check into a source-paper or mathematical review.
 2. Preserve a semantic checklist: claims, defined terms, quantities, comparisons, conditions, citations, and steps that make the argument understandable.
 3. If humanizer is available, read and apply it. Adapt its academic-prose defaults to this oral report using the rules below. If absent, use this reference directly without blocking the task.
-4. Revise excessive ceremony, unnecessary defensive language, and misplaced editorial instructions.
+4. Identify excessive ceremony, unnecessary defensive language, and misplaced editorial instructions. For check, propose wording only; for polish/draft, apply it within the authorized scope.
 5. Compare with the checklist, read the speech aloud, and check the neighboring transitions.
-6. For polish, apply scoped edits and summarize the changes. For check, give page-specific findings and proposed wording without modifying files.
+6. For polish, summarize the scoped edits. For check, use the audit output format below.
 
 An optional detector can flag passages, but a score or isolated keyword is not evidence that a sentence should be removed. Do not describe this review as proof of human authorship.
 
@@ -24,7 +32,7 @@ An optional detector can flag passages, but a score or isolated keyword is not e
 - Prefer ordinary punctuation to chains of parenthetical asides. Keep conventional Chinese punctuation and mathematical notation; do not mechanically apply English typography rules.
 - Remove chat residue and generic praise. Audit commentary stays in the review response, not in the deck or guide.
 
-Humanizing changes expression, not the coverage of the explanation. If five necessary steps were present, retain them or show where they have been deliberately relocated within the authorized scope.
+Humanizing changes expression, not the coverage, scientific examples, or order of the explanation. Preserve the existing steps and the source's conditions.
 
 ## Three language layers
 
@@ -34,9 +42,9 @@ Humanizing changes expression, not the coverage of the explanation. If five nece
 | Spoken supplement | 同一个家庭在各商品的模型中共用这组特征，因此其他商品的购买记录也能帮助估计它。 | 这一页应强调多结局信息共享。 |
 | Preparation | 本页预留90秒；完整推导可作为板书或备答。 | Do not place this instruction into audience-facing content. |
 
-A section agenda is legitimate navigation. A sentence about how the author should write or deliver the report is preparation. Distinguish these by function, not by searching for the word "报告".
+A sentence about how the author should write or deliver the report is preparation. Distinguish it from actual speech by function, not by searching for the word "报告". Inspect titles for phrase form only; do not use a title-style finding to propose a different topic or narrative.
 
-"接下来先看购买记录的结构" can be actual speech. "这里需要补充一个例子" is an instruction; write the example or keep the reminder in preparation notes.
+"接下来先看购买记录的结构" can be actual speech. "这里需要补充一个例子" is a preparation instruction; keep the reminder in notes or explain an existing source example within the authorized edit. Do not invent an example to repair the wording.
 
 ## Unnecessary defensive language versus necessary limits
 
@@ -46,7 +54,7 @@ Look for sentences such as "论文没有给出……", "论文不足以说明…
 |---|---|
 | Needed assumption, evidence boundary, unresolved result, or correction of a likely misreading | Keep it concisely with the relevant claim, using a positive scope statement where equivalent. |
 | Unrequested comparison with every possible method or application | Remove the tangent or move it to preparation/Q&A. |
-| Agent uncertainty about a source or technical point | Verify it; record unresolved uncertainty in the review or preparation material rather than presenting a generic disclaimer as lecture content. |
+| Agent uncertainty about a source or technical point | Do not add it as a generic disclaimer. Technical verification belongs to drafting or a separately requested technical explanation, not to check. |
 | Drafting or time-allocation comment | Move it to preparation. |
 | Substantive source limitation central to the argument | Explain it directly; do not erase it for stylistic confidence. |
 
@@ -59,16 +67,6 @@ Examples, assuming the stated scoped result is supported:
 
 Do not delete low coverage, null or adverse findings, selection bias, missing-data assumptions, local-optimum concerns, or incomplete analyses just because they qualify a result. Do not invent a positive conclusion to avoid a negative sentence.
 
-## Page-level acceptance
+## Audit output
 
-A listener using the agreed prerequisites should be able to explain what the objects are, why this step is needed, what the formula or result says, and why the next page follows.
-
-Check specifically that polishing has not removed:
-
-- The example that first establishes an unfamiliar object.
-- The meaning of a symbol or an assumption.
-- A necessary intermediate calculation.
-- The distinction between a metric and a different desirable outcome.
-- A natural transition that makes the talk coherent.
-
-For review findings, record page, affected layer, problem, suggested treatment, and any source check needed. Keep this audit separate from the presentation content.
+For each finding, report page/title, layer, the quoted wording, language category, a brief reason, and a meaning-preserving wording suggestion. Cover the requested files rather than sampling a few pages; combine repeated phrasing issues with their locations instead of repeating the same advice. If there are no in-scope findings, say so without manufacturing content or layout objections. Keep the audit outside the presentation and leave files unchanged under check. Do not claim to have proved that all AI authorship is absent.

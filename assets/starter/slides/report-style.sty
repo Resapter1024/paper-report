@@ -1,10 +1,12 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{report-style}[2026/10/22 Portable academic report style]
+\RequirePackage{iftex}
+\RequireXeTeX
 \RequirePackage[UTF8,fontset=fandol]{ctex}
 \RequirePackage{amsmath,amssymb,booktabs,graphicx,etoolbox}
 \IfFontExistsTF{KaiTi}
   {\setCJKfamilyfont{reportkai}[AutoFakeBold=2]{KaiTi}}
-  {\setCJKfamilyfont{reportkai}[AutoFakeBold=2]{FandolKai-Regular}}
+  {\setCJKfamilyfont{reportkai}[AutoFakeBold=2]{FandolKai-Regular.otf}}
 \AtBeginDocument{\CJKfamily{reportkai}}
 \definecolor{reportaccent}{RGB}{151,31,48}
 \useoutertheme[footline=authorinstitutetitle,subsection=false]{smoothbars}
@@ -46,10 +48,12 @@
     \usebeamerfont{title in head/foot}\insertshorttitle\hfill
     \insertframenumber\,/\,\inserttotalframenumber
   \end{beamercolorbox}}
+% Single source of contents pages: first section immediately after the cover,
+% then one at each subsequent section. No separate hand-written outline frames.
 \AtBeginSection[]{%
   \begingroup
   \setbeamertemplate{footline}{}
-  \begin{frame}[noframenumbering]{报告目录}
+  \begin{frame}[c,noframenumbering]{报告目录}
     \tableofcontents[currentsection,sectionstyle=show/shaded,subsectionstyle=hide]
   \end{frame}
   \endgroup}

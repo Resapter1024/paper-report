@@ -1,8 +1,6 @@
 # Verification and handoff
 
-Use this reference after structural changes and before delivering the requested report artifacts. For a narrow revision, focus checks on the changed content and affected dependencies.
-
-For check, report findings without modifying files. For draft or polish, complete the relevant checks after the scoped edits. Use [language-review.md](language-review.md) for language classification and repair.
+Use this reference for internal acceptance of draft/export artifacts and authorized revisions. For a narrow revision, verify the changed content and affected dependencies without reopening the report's content design. This reference is not the language-only $paper-report check command; that mode uses [language-review.md](language-review.md) exclusively.
 
 ## Content and audience comprehension
 
@@ -22,15 +20,17 @@ Read difficult passages aloud or rehearse them as speech. Replace compressed phr
 
 Check that the report's central question and idea or approach remain visible through the outline and conclusion. Simulations and applications should earn their time through their role in the argument. For an empirical report, do not remove central design or result content merely because applications were short in a previous methods talk.
 
+Verify retained content against the source map: original narrative order, original context of source examples, and a specific user request for any reordered sequence or invented slide example. Reject unfilled starter placeholders in a purported completed report. Verify noun-/verb-phrase slide titles without replacing the page's subject with a new editorial claim. See [source boundaries](paper-analysis.md#narrative-and-example-boundaries) and [slide defaults](deliverables.md#concrete-slide-defaults).
+
 Check consequential distinctions appropriate to the work: conditioning levels, identified objects, average versus uniform statements, optimization versus statistical convergence, and observed evidence versus causal or general claims. Verify user-suggested corrections against the source.
 
-Check that visible claims, actual speech, and preparation instructions remain in their proper layers. Review generic defensive sentences in context; retain necessary assumptions and limits. Verify that polishing has preserved examples, intermediate steps, and natural transitions.
+Use [language-review.md](language-review.md) for the language pass; do not duplicate its audit here.
 
 ## Timing
 
 Include time for substantive slides, supplements, navigation, transitions, pauses, and planned board work. Separate optional backup and Q&A from the main-talk estimate.
 
-Check the allocation against what will actually be said. If it is too long, identify the content to shorten, omit, or move to backup, then revise the estimate. Do not claim a shorter talk by changing timestamps alone.
+Check the allocation against what will actually be said. If it is too long, shorten or omit within scope while preserving the retained source order, then revise the estimate. Do not claim a shorter talk by changing timestamps alone.
 
 Leave a practical reserve compatible with the user's limit. Describe the duration as a plan or rehearsal estimate, not a guaranteed speaking time.
 
@@ -40,7 +40,7 @@ Use XeLaTeX for ctex, fontspec, or system-font documents. A typical BibTeX build
 
     XeLaTeX -> BibTeX -> XeLaTeX -> XeLaTeX
 
-Use scripts/build-latex.ps1 when appropriate. It detects BibTeX or Biber in ordinary projects and completes the final LaTeX passes. Verify the actual bibliography setup rather than assuming every project needs BibTeX.
+Use scripts/build-latex.ps1 when appropriate. It reads UTF-8 sources/logs, rejects a conflicting engine for the starter's XeLaTeX directive, detects BibTeX or Biber in ordinary projects, and completes the final LaTeX passes. Verify the actual bibliography setup rather than assuming every project needs BibTeX. The build helper does not certify PDF compatibility.
 
 Compile the deck before any guide that embeds its PDF. Rebuild dependent exports after relevant source changes. Do not modify a source midway through its build.
 
@@ -48,26 +48,38 @@ Check the final logs for:
 
 - LaTeX errors, undefined control sequences, and emergency stops.
 - Undefined citations or references.
-- Missing fonts, images, themes, or bibliography files.
+- Missing fonts, missing characters/glyphs (including nonfatal “Missing character:” messages), images, themes, or bibliography files.
 - Overfull boxes that visibly clip or collide with content.
 
-A pre-existing nonfatal template warning may remain only after its visual impact is checked. Undefined citations are not a harmless template warning.
+A pre-existing nonfatal template warning may remain only after its visual impact is checked. Missing glyphs and undefined citations are not harmless template warnings. If the compiler fails, identify the engine, encoding, package, or font error from the first relevant message; do not claim that this compatibility workflow proves an unrelated compilation failure has been fixed.
+
+## PDF compatibility
+
+Apply this to every final requested report, script, notes, and optional text-only PDF. Successful compilation and a single reader's display are insufficient.
+
+1. Use UTF-8 sources and the declared XeLaTeX engine. Use embeddable fonts available in the current environment, with the starter's Fandol fallback rather than an assumed system font. Never force embedding against font licensing restrictions; choose an embeddable alternative.
+2. Audit the actual final PDF with pdffonts: fonts must be embedded, and Chinese text must have explicit embedded ToUnicode maps. Font subsetting is acceptable when all used glyphs are present. A font can display using a reader's standard CJK collection while omitting its own ToUnicode map; that does not meet this delivery requirement. Extensible mathematical drawing pieces can lack a textual Unicode counterpart; the helper records unmapped fonts and rejects missing maps for composite text fonts rather than treating every decorative math glyph as a Chinese mapping error. Inspect these recorded fonts during visual/text review.
+3. Run scripts/check-pdf.py on the generated PDF. It requires Python with pypdf and PyMuPDF, plus pdffonts, pdftotext, and pdftoppm on PATH. For example:
+
+       python scripts/check-pdf.py <generated.pdf> --output-dir <qa-directory> --embed-cjk-maps
+
+   The optional --embed-cjk-maps flag updates only the specified generated PDF, embedding missing standard Adobe collection maps found through the TeX distribution's kpsewhich. It preserves the pages, links, and bookmarks. Omit this flag for a read-only check or a supplied source PDF. Do not invent identity mappings, copy text from a different font, rasterize Chinese, or outline all text as a substitute for correct embedding. Unsupported missing maps must be fixed through the actual font/driver configuration and checked again.
+4. The helper writes fonts.txt, both engines' extracted text, audit.json, and a PNG for every page under poppler/ and mupdf/. Inspect both render sets page by page at readable resolution, checking Chinese titles/body/bold text, equations, punctuation, clipping, and layout. pdftoppm and pdftocairo both use Poppler and do not count as independent engines. Compare extracted Chinese against the source, including titles, numbers, symbols, and changed text; confirm copy/search works. Matching extracted text alone cannot prove visual correctness.
+5. Finish the deck's font/mapping processing before embedding it into a script. Rebuild and recheck dependent PDFs after any later deck change. Record the tested PDF, page counts, font/mapping findings, renderer names, and actual visual review. The helper's successful exit only proves its automated checks passed; visual_review_required remains true. Missing tools or unreviewed pages mean verification is incomplete and must be reported at handoff.
 
 ## Portable starter checks
 
-When changing bundled assets, copy them into an isolated directory with no original project files. Compile a cover, a formula page, a result page, and both guide layouts using only the bundle and new source material. Inspect actual PDFs, not only skill/YAML validity.
+When changing bundled assets, copy them into an isolated directory with no original project files. Compile the cover, both content-layout slots, and both guide layouts. Layout placeholders are acceptable for a template smoke test, never as actual research content. Inspect actual PDFs, not only skill/YAML validity.
 
-Check that the presenter remains a visible draft placeholder until supplied, optional metadata can be empty, the cover can be reused with a supplied theme, and alternate aspect ratios do not clip. Use configured standard fonts or their documented fallback. No original author, student number, institutional logo, or original report path may leak into generic metadata.
+Check that the presenter remains a visible draft placeholder until supplied, optional metadata can be empty, the cover can be reused with a supplied theme, and alternate aspect ratios do not clip. Test a Chinese path containing spaces. Exercise the Fandol fallback even when KaiTi is installed, and verify the Chinese maps rather than relying on rendering alone. No original author, student number, institutional logo, or original report path may leak into generic metadata.
 
-Both guide roots must consume the same supplement body. Compare page mappings, labels, text preservation, timing suppression in text-only output, and the absence of slide images in that export. Starter examples are layout demonstrations, never evidence about a new study.
+Both guide roots must consume the same supplement body. Compare page mappings, labels, text preservation, timing suppression in text-only output, and the absence of slide images in that export.
 
 ## Render and inspect
 
-Render the slide PDF. For a new deck, inspect every substantive frame and section transition. For later revisions, inspect changed frames, neighboring frames, and affected transitions or numbering.
+Use both complete render sets from the PDF compatibility procedure above, including the cover, contents, body, and any backup. A changed font, map, or imported slide can affect pages outside the directly edited frame.
 
-Verify readable type, no clipping or overlap, usable tables and equations, correct titles and metadata, consistent navigation, and adherence to the supplied template. Check that slide content does not use block, alertblock, or exampleblock.
-
-Render the speaker script and preparation notes as well. Review the page sequence and inspect dense pages, equations, boundaries, and changed content at readable scale.
+Verify readable type, no clipping or overlap, usable tables and equations, correct titles and metadata, and adherence to the supplied template. Confirm the contents is physical page 2, appears once at each later section opening, highlights the current section, and links to the correct section destinations. Reject extra agendas, route maps, subsection outlines, and other contents-like panels. Check that ordinary slide bodies are vertically centered and have no gray “来源：…” line or repeated source strip. Check that slide content does not use block, alertblock, or exampleblock.
 
 For the slide-and-supplement guide, verify that each embedded slide is the exact intended compiled page, remains legible, and has the correct supplement beneath it. For a text-only export, check slide-number labels, content preservation, and page breaks.
 
@@ -83,20 +95,6 @@ Use the page map and actual compiled PDFs to verify:
 - A targeted edit has not unintentionally changed protected content; use source comparisons or rendered comparisons when warranted.
 
 Pay attention to inserted pages, removed sections, automatically split frames, and title/author changes. Keep presenter metadata separate from source attribution.
-
-## Final rehearsal and questions
-
-Use this section for $paper-report questions, natural-language requests for likely audience questions, and requested Q&A rehearsal. Work from the current slides and actual speaker script, including an unfinished draft when that is what the user supplies. Inspect existing project files before requesting them. If only one artifact is available, use it and state the coverage; if neither is available, request the presentation materials rather than inventing a talk from the paper.
-
-Use the audience background already agreed for the report. When unspecified, assume classmates who have heard the talk but have not read the source and do not have deep knowledge of the paper or related field. Do not restart planning for an otherwise self-contained questions request.
-
-Follow the presentation's sequence and identify questions prompted by a visible claim, example, equation, figure, or spoken explanation. Questions may connect several pages or return to an earlier claim; never require the listener to know a result, appendix, or specialist term available only in the source or study notes. The source may be consulted to verify an answer, but must not supply assumed listener knowledge.
-
-Prioritize plausible questions about meaning, motivation, assumptions, how a procedure works, interpreting evidence, or applying a stated result. A skeptical follow-up is appropriate when the talk itself invites it. Avoid a generic examination, leading questions that advertise the method, and forced technical objections. Explain an unfamiliar object in ordinary language within a question when needed; do not manufacture questions by pretending a clear explanation was absent.
-
-By default, return a concise numbered list of questions in the conversation. For each, include the displayed slide number/title (or a clearly labeled physical PDF page when no slide mapping is available) and a brief reason tied to what the listener saw or heard. Select the number and depth to suit the talk, covering likely points of confusion and substantive follow-ups without padding. Do not provide answers unless requested. Do not edit slides or scripts, or save a separate question file, unless the user asks.
-
-When answers are requested, give a short oral answer first, then optional technical detail and relevant limits. Verify consequential answers against the available source or analysis, distinguish supported conclusions from conjecture, and use accessible language. Save Q&A in notes when requested; do not automatically insert it into the talk.
 
 ## Final handoff
 

@@ -53,8 +53,8 @@ function Invoke-ReportCommand {
             -RedirectStandardError $standardErrorPath
 
         $commandOutput = @(
-            Get-Content -LiteralPath $standardOutputPath -ErrorAction SilentlyContinue
-            Get-Content -LiteralPath $standardErrorPath -ErrorAction SilentlyContinue
+            Get-Content -LiteralPath $standardOutputPath -Encoding UTF8 -ErrorAction SilentlyContinue
+            Get-Content -LiteralPath $standardErrorPath -Encoding UTF8 -ErrorAction SilentlyContinue
         )
 
         if ($process.ExitCode -ne 0) {
@@ -76,7 +76,11 @@ $texName = Split-Path -Leaf $resolvedTex
 $jobName = [System.IO.Path]::GetFileNameWithoutExtension($texName)
 $engineExecutable = Resolve-ReportExecutable -Name $Engine
 
-$sourceText = Get-Content -LiteralPath $resolvedTex -Raw
+$sourceText = Get-Content -LiteralPath $resolvedTex -Raw -Encoding UTF8
+if ($sourceText -match '(?m)^%\s*!TeX program\s*=\s*xelatex' -and
+    [System.IO.Path]::GetFileNameWithoutExtension($engineExecutable) -ne "xelatex") {
+    throw "This source requires XeLaTeX. Use -Engine xelatex; pdfLaTeX cannot compile this Chinese font setup."
+}
 $bibliographyMode = $Bibliography
 if ($bibliographyMode -eq "auto") {
     if ($sourceText -match "\\addbibresource") {
@@ -90,7 +94,7 @@ if ($bibliographyMode -eq "auto") {
     }
 }
 
-$latexArguments = @("-interaction=nonstopmode", "-halt-on-error", $texName)
+$latexArguments = @("-interaction=nonstopmode", "-halt-on-error", "-file-line-error", $texName)
 
 Push-Location -LiteralPath $workingDirectory
 try {
@@ -120,20 +124,21 @@ $fatalPatterns = @(
     "Emergency stop",
     "Citation .+ undefined",
     "Reference .+ undefined",
-    "There were undefined citations"
+    "There were undefined citations",
+    "Missing character:"
 )
 $qualityPatterns = @("Overfull \\[hv]box")
 
 $fatalMatches = @()
 $qualityMatches = @()
 if (Test-Path -LiteralPath $logPath) {
-    $fatalMatches = @(Select-String -LiteralPath $logPath -Pattern $fatalPatterns)
-    $qualityMatches = @(Select-String -LiteralPath $logPath -Pattern $qualityPatterns)
+    $fatalMatches = @(Select-String -LiteralPath $logPath -Pattern $fatalPatterns -Encoding UTF8)
+    $qualityMatches = @(Select-String -LiteralPath $logPath -Pattern $qualityPatterns -Encoding UTF8)
 }
 
 if ($fatalMatches.Count -gt 0) {
     $fatalMatches | ForEach-Object { Write-Error $_.Line }
-    throw "The final LaTeX log contains unresolved errors or references."
+    throw "The final LaTeX log contains unresolved errors, references, or missing glyphs."
 }
 
 if ($qualityMatches.Count -gt 0) {
@@ -143,4 +148,5 @@ if ($qualityMatches.Count -gt 0) {
     }
 }
 
+Write-Host "Compilation finished. PDF delivery still requires font/mapping checks and visual review of every page with two independent renderers; see scripts/check-pdf.py."
 Write-Output $pdfPath

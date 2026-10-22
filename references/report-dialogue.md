@@ -29,18 +29,18 @@ Without a mandatory external template, use the bundled style rather than asking 
 
 Do not make the user explain the paper's novelty or supply a narrative before you have read it. Source reading and proposing an argument are the agent's work. Investigate available material while answers are pending; do not silently settle a materially open constraint.
 
-## Stage 2: Discuss a source-informed narrative
+## Stage 2: Select depth within the source order
 
 After reading, propose:
 
 1. The central question and the message the audience should take away.
 2. The idea or research approach and its supported contributions or findings.
-3. A section outline with time allocations and the evidence each section provides.
+3. An outline in the source's narrative order, with time allocations and source locations.
 4. What will be shortened, omitted, or kept as backup.
 
 For the presenter's own report, explain their actual research decisions and findings. Identify whether results are complete, preliminary, reproduced, or planned. Do not demand novelty or convert an unfinished proposal into completed research.
 
-When there is a real tradeoff, offer a recommended plan and a useful alternative. For example, a methods talk might explain the mechanism with one necessary derivation, or spend more time on the theorem and omit an application. A course research report might emphasize design and interpretation, or the implementation choices if these are assessed.
+When there is a real tradeoff, discuss depth and selection within the source order: for example, how much time a derivation needs or which application details to omit. Apply the [narrative and example boundaries](paper-analysis.md#narrative-and-example-boundaries) rather than designing a new opening or sequence.
 
 Ask about the decision that changes the report, such as which argument deserves live explanation. Do not ask "What do you think?" without showing the concrete choice and its consequences.
 
@@ -54,7 +54,7 @@ Useful discussion includes:
 
 - Whether a particular derivation should be delivered live or explained through its key step.
 - Whether a displayed result actually supports the central claim.
-- Whether an unfamiliar term needs a concrete introduction before its formal definition.
+- Whether an unfamiliar term needs more explanation at its original point of introduction.
 - Whether the presenter needs a fuller explanation in preparation notes before using a shorter oral version.
 - Which supporting material to remove when the time budget is exceeded.
 
@@ -64,6 +64,6 @@ A question about understanding does not automatically authorize edits. If the us
 
 ## Keep the conversation lightweight
 
-Retain the user's decisions, prerequisite knowledge, required introductions, and intended listener takeaways in existing project notes or the page map rather than creating a separate questionnaire document. Carry them across turns and do not ask them again after a page is reordered.
+Retain the user's decisions, prerequisite knowledge, required introductions, and intended listener takeaways in existing project notes or the page map rather than creating a separate questionnaire document. Carry them across turns and do not reopen settled choices after an authorized revision.
 
 For a narrow revision or export of an existing report, do not restart intake or reopen a settled narrative. Apply only the parts of this process relevant to the change.

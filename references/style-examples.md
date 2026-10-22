@@ -2,13 +2,13 @@
 
 Read these four short pairs before a first draft; revisit the relevant pair for a revision. These are self-contained style samples distilled from the validated longitudinal-data report. They teach explanation patterns, not a required topic, model, number of pages, or speaking voice for every study.
 
-Adapt the reasoning to the new source and speaker role. Do not copy names, sample sizes, metrics, or findings into an unrelated report.
+Borrow the explanation style while following the new source's narrative order. These samples do not authorize a motivating example, scientific scenario, parameter choice, or result absent from that source. Do not copy their names, sample sizes, metrics, or findings into an unrelated report.
 
 ## 1. Motivation: from a concrete difficulty to the idea
 
 ### Slide content
 
-**观测特征之外仍有共同的个体差异**
+**个体差异与共享潜变量**
 
 基线、收入和家庭规模解释了一部分购买差异。剩余差异仍可能在多个商品和多个时期反复出现。
 
@@ -61,7 +61,7 @@ When the formulas themselves are needed, show the corresponding steps:
 
 ### Slide content
 
-**结局参数与个体特征交替更新**
+**结局参数与个体特征的交替更新**
 
 先固定当前的个体特征，逐商品更新基线、协变量系数和商品系数。
 
@@ -89,7 +89,7 @@ Author context: pair this sample with the actual source error plot. This is an a
 
 ### Slide content
 
-**共享信息如何改善回归系数估计**
+**回归系数的估计误差**
 
 横轴：结局数 J，同时取 N=10J。纵轴：回归系数矩阵的归一化误差。两个面板分别对应真实潜变量维数3和8。
 
@@ -111,4 +111,4 @@ Author context: pair this sample with the actual source error plot. This is an a
 
 The good supplements contain full explanation, necessary repetition, and natural connectives. They are not meant to be read as a separate manuscript independent of the slide.
 
-For each new page, choose the reasoning pattern that helps its audience. Do not mechanically reproduce the same introductory and concluding phrases on every page. For empirical work, apply the same care to variables, design choices, evidence, and interpretation even when no formula or algorithm is needed.
+For each new page, apply the relevant explanation pattern to the source content at that point. Do not use these pairs as an alternative talk sequence or mechanically reproduce their transitions. For empirical work, apply the same care to variables, design choices, evidence, and interpretation even when no formula or algorithm is needed.

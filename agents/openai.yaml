@@ -1,4 +1,4 @@
 interface:
   display_name: "论文与研究报告汇报"
   short_description: "学习研究材料、准备与打磨汇报，编写 Slides、讲稿和学习笔记并模拟听众提问"
-  default_prompt: "Use $paper-report to plan, draft, polish, check, export, or prepare audience questions for my academic presentation, adapting the slides, speaker script, and study notes to my materials and audience."
+  default_prompt: "Use $paper-report to plan, draft, polish, check language, export, or prepare audience questions for my academic presentation, preserving my source's narrative order and adapting the explanation to my audience."

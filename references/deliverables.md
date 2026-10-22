@@ -16,9 +16,9 @@ Preserve an existing project. For a new project without a mandatory template, co
     script/supplements.tex
     notes/preparation-notes.tex
 
-The starter contains explicitly labeled measurement examples so it compiles immediately; replace those pages and supplements with the actual report. They are not research findings to reuse. Replace title/context/source placeholders from current inputs, keeping presenter empty until the user supplies it.
+The starter contains neutral layout placeholders so it compiles immediately. Replace them with the actual source's content in its narrative order; placeholders are not proposed teaching examples or a prescribed report structure. Replace title/context/source placeholders from current inputs, keeping presenter empty until the user supplies it. Use [paper-analysis.md](paper-analysis.md#narrative-and-example-boundaries) for the source-order and example boundaries.
 
-Compile slides/report.tex first, then the requested guide and notes. Both guide layouts input script/supplements.tex, the single authoritative supplemental body. Do not maintain a second read-aloud manuscript.
+Compile and finalize slides/report.tex first, including PDF font/mapping checks, then compile the requested guide and notes. Both guide layouts input script/supplements.tex, the single authoritative supplemental body. Do not maintain a second read-aloud manuscript. Follow [PDF compatibility](quality-checks.md#pdf-compatibility) for every requested PDF.
 
 The bundle must work with its own relative files and standard TeX packages. No original report folder, institutional logo, proprietary font file, humanizer installation, or external reference deck is required.
 
@@ -44,15 +44,23 @@ Do not infer a presenter from a source, sample, account, old report, or file own
 
 The standalone starting point is 4:3, 11pt, approximately 0.65cm left/right margins, 3pt paragraph spacing, and restrained dark red RGB(151,31,48) on white. The source theme provides top section navigation, a title bar, and compact footer. Keep the chosen template's explicit aspect ratio and mandatory typography.
 
-Chinese text prefers an available Kai-style face with a TeX-distributed Fandol fallback; Latin and mathematics use standard TeX fonts. Do not require one machine's absolute font path.
+Chinese sources must be UTF-8 and use XeLaTeX for this starter. Chinese text prefers an available Kai-style face with a TeX-distributed Fandol fallback; Latin and mathematics use standard TeX fonts. Keep the explicit fontset and editor engine directives. Check that the distribution has ctex, Fandol, and Adobe CMap resources; do not require one machine's absolute font path or assume Windows fonts exist elsewhere.
 
-Use left-aligned text, limited emphasis, and clear spacing between a short colored subheading, explanation, and centered equation. Use columns or tables for meaningful comparisons, not on every page. Orient figures briefly and explain their implication in the supplement.
+Use Beamer's centered frame alignment ([c]) so the content group is vertically centered in the available body between the title bar and footer. Keep paragraphs left-aligned, with limited emphasis and clear spacing between a short colored subheading, explanation, and centered equation. Do not use [t] globally, pin sparse content to the top, or reserve a bottom strip for provenance. Use columns or tables for meaningful comparisons, not on every page. Orient figures briefly and explain their implication in the supplement.
 
 Prohibit block, alertblock, and exampleblock environments in slide content, even for important theorems. Ordinary text, equations, and restrained bold or theme color are sufficient.
 
-Make titles informative: "共享信息如何改善回归系数估计" identifies the claim being examined. Avoid slogans and writing reminders such as "报告重点" or "本页讲解安排" on content pages. A legitimate outline/navigation page remains allowed.
+Use a short noun phrase or verb phrase for each slide title, naming its main object, method, operation, or result category. Examples: “多元纵向数据的观测结构”, “统计目标与分析困难”, “一致性与估计误差速率”, “构造置信区间”. Reject full sentences, questions, and conclusion-like slogans: “持续查看数据，改变了需要控制的事件” becomes “持续监测下的覆盖事件”; “共享信息如何改善回归系数估计” becomes “回归系数的估计误差”. Sentence explanations belong in the body or script. Avoid preparation reminders such as “报告重点” or “本页讲解安排”. Use only the contents-page scheme below for an outline.
 
-Resolve density through selection, organization, or pagination before shrinking text. Avoid overlays unless the task requires them. A references display page is optional; traceable citations and source records remain necessary.
+Do not generate gray “来源：…” lines, small source strips, per-slide source footers, or helper macros that append them. Put page-specific source locations and detailed provenance in notes. Necessary author attribution, citation beside a borrowed claim, or licensed-figure credit can remain concise and in context; do not convert this into a repeated footer. Keep the existing cover attribution and template metadata separate from these prohibited source strips.
+
+Resolve density through selection, organization, or pagination before shrinking text. Avoid overlays unless the task requires them. A references display page is optional; traceable source records remain in notes.
+
+### One contents-page scheme
+
+Physical PDF page 1 is the title page and page 2 is the clickable contents page. The first unstarred section must immediately follow the cover in the source: its AtBeginSection hook emits page 2. The same hook emits one contents page at every later main-section opening, showing the same section list and highlighting the current section. Do not insert a second manual tableofcontents frame after the title, or duplicate the first section's contents page.
+
+Use section titles from the actual report and clickable destinations to their section openings. A supplied theme can retain its compact navigation bar, but disable any additional automatic section-title pages or subsection agendas that would duplicate this scheme. Do not add “报告路线”, “本节概览”, hand-written agenda lists, or a miniature contents panel on ordinary content slides. Content comparisons and explanations remain valid when they serve a substantive point rather than restating the report structure.
 
 Navigation-only pages use no substantive slide number by default. Keep physical PDF pages distinct from displayed numbers.
 
@@ -68,16 +76,16 @@ Use the page's function to choose what to explain:
 
 | Page type | Explanation needed |
 |---|---|
-| Motivation | A concrete setting, its difficulty, and why the new idea addresses it |
+| Motivation | The source's setting, its difficulty, and the motivation introduced there |
 | Formula/model | What question it answers, objects and terms, relevant conditions, key calculation, and meaning |
 | Algorithm | Fixed versus updated quantities, records used, response/predictors/offsets, and purpose of the update |
 | Theory | Object, consequential conditions, exact result, and its use in the argument |
 | Results | Minimal reading instructions, metric, relevant comparison, connection to the idea, and supported conclusion |
 | Empirical design | Variables, design decisions, evidence, and the interpretation they allow |
 
-These are checkpoints, not mandatory five-part paragraphs. Follow the visible order when it helps. Open with the actual conceptual connection and end with the next question when useful, without repetitive stock transitions.
+These are checkpoints, not mandatory five-part paragraphs. Follow the slide and source sequence. Explain the local conceptual connection and link to the next step without adding a new prelude or repetitive stock transitions.
 
-Write the actual explanation. "强调创新", "解释图形", and "这里补充一个例子" are preparation instructions; replace them with the substance or keep them outside the spoken body.
+Write the actual explanation. "强调创新", "解释图形", and "这里补充一个例子" are preparation instructions. Explain the source content itself or keep the reminder outside the spoken body; a reminder to add an example does not authorize inventing one.
 
 Keep important mathematics complete enough for the intended audience. Use the linked slide for the central formula and add necessary steps beneath it. Put nonessential long proofs and branches in clearly marked backup/preparation notes. A central new topic with no visible context may require revising the slide within the authorized scope.
 
