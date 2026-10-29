@@ -16,7 +16,7 @@ Preserve an existing project. For a new project without a mandatory template, co
     script/supplements.tex
     notes/preparation-notes.tex
 
-The starter contains neutral layout placeholders so it compiles immediately. Replace them with the actual source's content in its narrative order; placeholders are not proposed teaching examples or a prescribed report structure. Replace title/context/source placeholders from current inputs, keeping presenter empty until the user supplies it. Use [paper-analysis.md](paper-analysis.md#narrative-and-example-boundaries) for the source-order and example boundaries.
+The starter contains neutral layout placeholders so it compiles immediately. Replace them with actual source content under [content integrity and selection](paper-analysis.md#content-integrity-and-selection); placeholders are not proposed teaching examples or a prescribed report structure. Replace title/context/source placeholders from current inputs, keeping presenter empty until the user supplies it.
 
 Compile and finalize slides/report.tex first, including PDF font/mapping checks, then compile the requested guide and notes. Both guide layouts input script/supplements.tex, the single authoritative supplemental body. Do not maintain a second read-aloud manuscript. Follow [PDF compatibility](quality-checks.md#pdf-compatibility) for every requested PDF.
 
@@ -40,6 +40,20 @@ Cover hierarchy:
 
 Do not infer a presenter from a source, sample, account, old report, or file owner. Ask for the current report's name/identifier if absent and continue independent work. An unfilled presenter is explicitly pending in the draft handoff.
 
+## Slides, script, and notes responsibilities
+
+Use [content integrity and selection](paper-analysis.md#content-integrity-and-selection) to decide what may be shortened and what must remain visible. The artifacts serve different purposes:
+
+| Artifact | Responsibility |
+|---|---|
+| Slides | Present the claims, complete selected formal statements, and source-specific foundations needed to interpret current and subsequent pages. |
+| Speaker script | Explain the visible content, the meaning and role of conditions, the reasoning being taught, and the connections between pages. |
+| Study notes | Develop deeper background, full proofs, optional branches, preparation decisions, and source verification for the presenter. |
+
+Write and verify the required slide content before relying on the script's explanations. A complete spoken explanation does not repair an incomplete displayed statement, and detailed notes do not establish listener knowledge. Necessary repetition across slides and speech is welcome when it helps the audience follow the argument.
+
+If a complete statement needs several slides, split it into readable, explicitly connected consecutive pages and keep the page map and script aligned. Do not offload its required parts to the script or notes to fit a layout.
+
 ## Concrete slide defaults
 
 The standalone starting point is 4:3, 11pt, approximately 0.65cm left/right margins, 3pt paragraph spacing, and restrained dark red RGB(151,31,48) on white. The source theme provides top section navigation, a title bar, and compact footer. Keep the chosen template's explicit aspect ratio and mandatory typography.
@@ -54,7 +68,7 @@ Use a short noun phrase or verb phrase for each slide title, naming its main obj
 
 Do not generate gray “来源：…” lines, small source strips, per-slide source footers, or helper macros that append them. Put page-specific source locations and detailed provenance in notes. Necessary author attribution, citation beside a borrowed claim, or licensed-figure credit can remain concise and in context; do not convert this into a repeated footer. Keep the existing cover attribution and template metadata separate from these prohibited source strips.
 
-Resolve density through selection, organization, or pagination before shrinking text. Avoid overlays unless the task requires them. A references display page is optional; traceable source records remain in notes.
+Resolve density through readable pagination or selection under the content-integrity rules before shrinking text. Retained statements and foundations must remain complete and legible. Avoid overlays unless the task requires them. A references display page is optional; traceable source records remain in notes.
 
 ### One contents-page scheme
 
@@ -66,9 +80,9 @@ Navigation-only pages use no substantive slide number by default. Keep physical 
 
 ## Speaker script: actual supplemental speech
 
-The default guide is a slide above a coherent spoken supplement. It adds what the presenter needs to say while using that slide.
+The default guide is a slide above a coherent spoken supplement. It supplies the actual speech needed to explain that slide under the artifact responsibilities above.
 
-Assume listeners have the agreed prerequisites but have not read the source. Do not make them infer source-specific objects, terminology, conditioning, or intermediate steps.
+Assume listeners know only the agreed prerequisites and what the report has already introduced. At each page, establish why the current content is needed, how it follows from earlier content, and what it enables next. Explain source-specific objects, terminology, conditioning, and required intermediate reasoning directly.
 
 Supplemental coverage is determined by understanding, not by a fixed short word count. Necessary repetition of visible content is welcome when it connects the reasoning. Avoiding duplication must not remove symbol introductions, examples, or logical steps.
 
@@ -79,7 +93,7 @@ Use the page's function to choose what to explain:
 | Motivation | The source's setting, its difficulty, and the motivation introduced there |
 | Formula/model | What question it answers, objects and terms, relevant conditions, key calculation, and meaning |
 | Algorithm | Fixed versus updated quantities, records used, response/predictors/offsets, and purpose of the update |
-| Theory | Object, consequential conditions, exact result, and its use in the argument |
+| Theory | Meaning and role of the displayed conditions, interpretation of the complete displayed result, selected proof reasoning, and its use in the argument |
 | Results | Minimal reading instructions, metric, relevant comparison, connection to the idea, and supported conclusion |
 | Empirical design | Variables, design decisions, evidence, and the interpretation they allow |
 
@@ -87,13 +101,13 @@ These are checkpoints, not mandatory five-part paragraphs. Follow the slide and 
 
 Write the actual explanation. "强调创新", "解释图形", and "这里补充一个例子" are preparation instructions. Explain the source content itself or keep the reminder outside the spoken body; a reminder to add an example does not authorize inventing one.
 
-Keep important mathematics complete enough for the intended audience. Use the linked slide for the central formula and add necessary steps beneath it. Put nonessential long proofs and branches in clearly marked backup/preparation notes. A central new topic with no visible context may require revising the slide within the authorized scope.
+Once the slide statement is complete, add the reasoning and interpretation needed for the agreed audience. Put nonessential proof detail and optional branches in clearly marked backup or preparation notes. When a new topic lacks required visible foundations, repair the slides within the authorized scope instead of explaining the omission away in the script.
 
 ### Guide layout
 
 The starter uses A4, 12pt, margins 15mm left/right, 12mm top, 14mm bottom, 1.16 line spacing, 7pt paragraph spacing, and a subtle theme-color separator. Directly embed the actual compiled slide PDF to preserve equations and vector text.
 
-Each substantive slide normally begins a new page. Do not force a dense supplement into tiny type to preserve this convention; simplify its delivery, move optional detail to backup, or permit a clearly labeled continuation.
+Each substantive slide normally begins a new page. Do not force a dense supplement into tiny type to preserve this convention; permit a clearly labeled continuation or shorten genuinely optional explanation under the content-integrity rules.
 
 Use the ReportSlide environment in supplements.tex with displayed number, physical PDF page, title, and optional timing label. Keep timings and preparation reminders out of the spoken body.
 
@@ -101,7 +115,7 @@ The text-only root uses the same supplements with 11pt type, bold slide-number l
 
 ## Preparation notes and language layers
 
-Slides (report) contain what the audience sees. The speaker script (script) contains the speech that explains and connects those slides. Study notes (notes) develop the concepts, assumptions, derivations, and background needed to understand both; they may also contain source checks, editorial choices, reminders, timing decisions, and optional answers.
+Apply the [artifact responsibilities](#slides-script-and-notes-responsibilities) above. Preparation notes may contain source checks, editorial choices, reminders, timing decisions, and optional answers; none substitutes for required audience-facing content.
 
 Keep these layers distinct using [language-review.md](language-review.md). Preserve true qualifications; avoid inserting each unresolved editorial concern as a generic audience-facing disclaimer.
 
@@ -109,7 +123,7 @@ The notes support the presenter's deeper understanding rather than duplicating t
 
 ## Mapping, terminology, and timing
 
-Use one authoritative page map with stable identity, displayed number/title, physical slide-PDF page, supplement, source location, and planned time. Existing project metadata is enough; no extra configuration framework is needed.
+Use one authoritative page map with stable identity, displayed number/title, physical slide-PDF page, supplement, source location, and planned time. Include the prerequisite and statement-coverage fields from the [source map](paper-analysis.md#build-a-compact-source-map) in that same record. Existing project metadata is enough; no extra configuration framework is needed.
 
 Maintain terminology across headings, navigation, slide content, supplements, notes, and exports within the edit scope. Protect source titles and unrelated files during replacements.
 

@@ -2,35 +2,47 @@
 
 Use this reference for internal acceptance of draft/export artifacts and authorized revisions. For a narrow revision, verify the changed content and affected dependencies without reopening the report's content design. This reference is not the language-only $paper-report check command; that mode uses [language-review.md](language-review.md) exclusively.
 
-## Content and audience comprehension
+## Content acceptance
 
-Review each substantive page together with its spoken supplement, using only the audience's agreed prerequisites and what the talk has introduced so far.
+For drafts and substantive revisions, perform the following two passes in order. [Content integrity and selection](paper-analysis.md#content-integrity-and-selection) is the governing content standard; the script or notes cannot compensate for a failure of the first pass. For a reproduction-only export, verify preservation and synchronization rather than reopening the content design.
+
+### Source-to-slides verification
+
+Compare the actual final slides with the source and source/page map, without using the script as a substitute for displayed content. A connected group of statement pages and explicitly referenced earlier condition pages can be assessed together.
 
 | Check | Acceptance criterion |
 |---|---|
-| Purpose | The audience can understand why this page appears here. |
-| Objects | Important symbols, indices, variables, and metrics have been introduced. |
-| Reasoning | Necessary assumptions and intermediate steps are available in the slide or supplement. |
-| Conclusion | The explanation states what follows and how it advances the argument. |
-| Continuity | The next page does not depend on unexplained source-specific context. |
-| Evidence | Claims are supported, with interpretation and incomplete work identifiable. |
-| Attribution | The presenter's work, source authors' work, and borrowed methods remain distinct. |
+| Formal statement coverage | Every required component of each selected formal result is mapped from its full source statement to visible slides; no condition-only result, missing conclusion, or script-only statement component remains. |
+| Referenced conditions | Conditions used by a result have their actual requirements, symbols, and ranges displayed before or at first use; later references resolve to those slide locations. |
+| Foundations | Each page's required source-specific definitions, setup, and prior results are introduced on slides before or at first use. |
+| Mathematical fidelity | The displayed statement preserves the source's domains, quantifiers, restrictions, conditioning, mathematical relations, probability meaning, and conclusions. |
+| Source and evidence | Claims are supported and traceable; interpretations, incomplete work, authorship, and borrowed methods are distinguishable. |
+| Order and selection | Local expansions follow the source's references; the main narrative and source examples retain their context unless the user specifically requested otherwise. Omissions leave no dangling prerequisite. |
 
-Read difficult passages aloud or rehearse them as speech. Replace compressed phrases, unexplained jargon, and editorial directions with the actual explanation. Do not assume a mathematically trained listener has already inferred the paper's argument.
+Walk the slides in their final order using only the agreed general prerequisites and material already introduced. For each new required object or condition, check its introduction location. Follow source references and compare statement components individually, not merely theorem headings or assumption counts. An unexplained label, source citation, takeaway sentence, or detailed note is not evidence of a complete displayed statement. Record and resolve source gaps before treating a result as verified.
 
-Check that the report's central question and idea or approach remain visible through the outline and conclusion. Simulations and applications should earn their time through their role in the argument. For an empirical report, do not remove central design or result content merely because applications were short in a previous methods talk.
+Reject unfilled starter placeholders in a purported completed report. Verify phrase-form titles, readable mathematical content, and the [slide defaults](deliverables.md#concrete-slide-defaults). Compilation success, extracted text, and keyword matching do not establish scientific completeness.
 
-Verify retained content against the source map: original narrative order, original context of source examples, and a specific user request for any reordered sequence or invented slide example. Reject unfilled starter placeholders in a purported completed report. Verify noun-/verb-phrase slide titles without replacing the page's subject with a new editorial claim. See [source boundaries](paper-analysis.md#narrative-and-example-boundaries) and [slide defaults](deliverables.md#concrete-slide-defaults).
+### Slide-and-speech comprehension
 
-Check consequential distinctions appropriate to the work: conditioning levels, identified objects, average versus uniform statements, optimization versus statistical convergence, and observed evidence versus causal or general claims. Verify user-suggested corrections against the source.
+After slide-content acceptance, review each page together with its spoken supplement using only the audience's agreed prerequisites and what the talk has introduced so far.
 
-Use [language-review.md](language-review.md) for the language pass; do not duplicate its audit here.
+| Check | Acceptance criterion |
+|---|---|
+| Purpose and continuity | Speech explains why the page appears here, connects it to preceding content, and prepares the next step without assumed knowledge of the source. |
+| Meaning | Source-specific terminology, displayed conditions, and formal conclusions receive an understandable explanation. |
+| Reasoning | The argument includes the intermediate reasoning needed for the agreed audience, without conflating a statement, its proof, and its interpretation. |
+| Supported takeaway | The explanation states what follows, its scope, and how it advances the central argument. |
+
+Read difficult passages aloud or rehearse them as speech. Replace compressed jargon and editorial directions with the actual explanation. Do not infer understanding from mathematical training alone. Check distinctions appropriate to the work and verify user-suggested mathematical corrections against the source.
+
+Check that the central question and idea remain visible through the talk. Judge the time earned by simulations and applications according to this report's purpose. Use [language-review.md](language-review.md) for the language pass; do not duplicate its audit here.
 
 ## Timing
 
 Include time for substantive slides, supplements, navigation, transitions, pauses, and planned board work. Separate optional backup and Q&A from the main-talk estimate.
 
-Check the allocation against what will actually be said. If it is too long, shorten or omit within scope while preserving the retained source order, then revise the estimate. Do not claim a shorter talk by changing timestamps alone.
+Check the allocation against what will actually be said. If it is too long, apply [foundations and shortening](paper-analysis.md#foundations-and-shortening) to optional content and update the prerequisite map and estimate. Recheck affected statement coverage and dependency chains. Do not claim a shorter talk by changing timestamps alone.
 
 Leave a practical reserve compatible with the user's limit. Describe the duration as a plan or rehearsal estimate, not a guaranteed speaking time.
 

@@ -13,7 +13,7 @@ Polish applies authorized wording edits with the same content-preservation bound
 ## Process
 
 1. Read every requested slide and its corresponding supplement. Identify whether a sentence belongs to visible content, actual speech, or preparation. Use the supplied text as context; do not turn check into a source-paper or mathematical review.
-2. Preserve a semantic checklist: claims, defined terms, quantities, comparisons, conditions, citations, and steps that make the argument understandable.
+2. Preserve a semantic checklist of the supplied content: claims, defined terms, quantities, comparisons, complete conditions and conclusions, quantifiers and ranges, citations, and steps that make the argument understandable. Wording changes must not delete, weaken, or relocate these components; this preservation check does not expand check into a technical completeness audit.
 3. If humanizer is available, read and apply it. Adapt its academic-prose defaults to this oral report using the rules below. If absent, use this reference directly without blocking the task.
 4. Identify excessive ceremony, unnecessary defensive language, and misplaced editorial instructions. For check, propose wording only; for polish/draft, apply it within the authorized scope.
 5. Compare with the checklist, read the speech aloud, and check the neighboring transitions.

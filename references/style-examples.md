@@ -1,6 +1,6 @@
 # Paired slide and spoken-supplement examples
 
-Read these four short pairs before a first draft; revisit the relevant pair for a revision. These are self-contained style samples distilled from the validated longitudinal-data report. They teach explanation patterns, not a required topic, model, number of pages, or speaking voice for every study.
+Read these existing style excerpts before a first draft; revisit the relevant pair for a revision. They are extracts from the validated longitudinal-data report, not complete slide sequences or a required topic, model, number of pages, or speaking voice for every study. Apply [content integrity and selection](paper-analysis.md#content-integrity-and-selection) to the new report; omissions in a style excerpt do not authorize omissions from its slides.
 
 Borrow the explanation style while following the new source's narrative order. These samples do not authorize a motivating example, scientific scenario, parameter choice, or result absent from that source. Do not copy their names, sample sizes, metrics, or findings into an unrelated report.
 
@@ -109,6 +109,6 @@ Author context: pair this sample with the actual source error plot. This is an a
 
 ## How to use these pairs
 
-The good supplements contain full explanation, necessary repetition, and natural connectives. They are not meant to be read as a separate manuscript independent of the slide.
+Use the excerpts for explanatory depth, necessary repetition, and natural connectives. For the division of content between complete slides and their explanation, follow the [artifact responsibilities](deliverables.md#slides-script-and-notes-responsibilities). The script is not a separate manuscript or a place to hide missing slide content.
 
 For each new page, apply the relevant explanation pattern to the source content at that point. Do not use these pairs as an alternative talk sequence or mechanically reproduce their transitions. For empirical work, apply the same care to variables, design choices, evidence, and interpretation even when no formula or algorithm is needed.
