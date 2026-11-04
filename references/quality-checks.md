@@ -4,7 +4,7 @@ Use this reference for internal acceptance of draft/export artifacts and authori
 
 ## Content acceptance
 
-For drafts and substantive revisions, perform the following two passes in order. [Content integrity and selection](paper-analysis.md#content-integrity-and-selection) is the governing content standard; the script or notes cannot compensate for a failure of the first pass. For a reproduction-only export, verify preservation and synchronization rather than reopening the content design.
+For drafts and substantive revisions, perform the following two passes in order. [Content integrity and selection](paper-analysis.md#content-integrity-and-selection) is the governing content standard; the script or conversation cannot compensate for a failure of the first pass. For a reproduction-only export, verify preservation and synchronization rather than reopening the content design.
 
 ### Source-to-slides verification
 
@@ -19,7 +19,7 @@ Compare the actual final slides with the source and source/page map, without usi
 | Source and evidence | Claims are supported and traceable; interpretations, incomplete work, authorship, and borrowed methods are distinguishable. |
 | Order and selection | Local expansions follow the source's references; the main narrative and source examples retain their context unless the user specifically requested otherwise. Omissions leave no dangling prerequisite. |
 
-Walk the slides in their final order using only the agreed general prerequisites and material already introduced. For each new required object or condition, check its introduction location. Follow source references and compare statement components individually, not merely theorem headings or assumption counts. An unexplained label, source citation, takeaway sentence, or detailed note is not evidence of a complete displayed statement. Record and resolve source gaps before treating a result as verified.
+Walk the slides in their final order using only the agreed general prerequisites and material already introduced. For each new required object or condition, check its introduction location. Follow source references and compare statement components individually, not merely theorem headings or assumption counts. An unexplained label, source citation, takeaway sentence, or private explanation is not evidence of a complete displayed statement. Record and resolve source gaps before treating a result as verified.
 
 Reject unfilled starter placeholders in a purported completed report. Verify phrase-form titles, readable mathematical content, and the [slide defaults](deliverables.md#concrete-slide-defaults). Compilation success, extracted text, and keyword matching do not establish scientific completeness.
 
@@ -67,7 +67,7 @@ A pre-existing nonfatal template warning may remain only after its visual impact
 
 ## PDF compatibility
 
-Apply this to every final requested report, script, notes, and optional text-only PDF. Successful compilation and a single reader's display are insufficient.
+Apply this to every final requested report, script, and optional text-only PDF. Successful compilation and a single reader's display are insufficient.
 
 1. Use UTF-8 sources and the declared XeLaTeX engine. Use embeddable fonts available in the current environment, with the starter's Fandol fallback rather than an assumed system font. Never force embedding against font licensing restrictions; choose an embeddable alternative.
 2. Audit the actual final PDF with pdffonts: fonts must be embedded, and Chinese text must have explicit embedded ToUnicode maps. Font subsetting is acceptable when all used glyphs are present. A font can display using a reader's standard CJK collection while omitting its own ToUnicode map; that does not meet this delivery requirement. Extensible mathematical drawing pieces can lack a textual Unicode counterpart; the helper records unmapped fonts and rejects missing maps for composite text fonts rather than treating every decorative math glyph as a Chinese mapping error. Inspect these recorded fonts during visual/text review.
@@ -102,7 +102,7 @@ Use the page map and actual compiled PDFs to verify:
 - Displayed slide numbers versus physical PDF pages.
 - All substantive slides have the correct supplement; excluded navigation and backup pages are intentional.
 - Titles, equations, terminology, notation, and assumptions agree across the linked artifacts.
-- Source locations, note references, time allocations, and cumulative times remain correct.
+- Source locations, page-map cross-references, time allocations, and cumulative times remain correct.
 - All requested exports use the current authoritative supplemental content.
 - A targeted edit has not unintentionally changed protected content; use source comparisons or rendered comparisons when warranted.
 

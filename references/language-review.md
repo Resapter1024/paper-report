@@ -44,7 +44,7 @@ Humanizing changes expression, not the coverage, scientific examples, or order o
 
 A sentence about how the author should write or deliver the report is preparation. Distinguish it from actual speech by function, not by searching for the word "报告". Inspect titles for phrase form only; do not use a title-style finding to propose a different topic or narrative.
 
-"接下来先看购买记录的结构" can be actual speech. "这里需要补充一个例子" is a preparation instruction; keep the reminder in notes or explain an existing source example within the authorized edit. Do not invent an example to repair the wording.
+"接下来先看购买记录的结构" can be actual speech. "这里需要补充一个例子" is a preparation instruction; keep the reminder in the review response or explain an existing source example within the authorized edit. Do not invent an example to repair the wording.
 
 ## Unnecessary defensive language versus necessary limits
 

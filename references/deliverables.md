@@ -14,11 +14,10 @@ Preserve an existing project. For a new project without a mandatory template, co
     script/text-only.tex
     script/guide-style.sty
     script/supplements.tex
-    notes/preparation-notes.tex
 
 The starter contains neutral layout placeholders so it compiles immediately. Replace them with actual source content under [content integrity and selection](paper-analysis.md#content-integrity-and-selection); placeholders are not proposed teaching examples or a prescribed report structure. Replace title/context/source placeholders from current inputs, keeping presenter empty until the user supplies it.
 
-Compile and finalize slides/report.tex first, including PDF font/mapping checks, then compile the requested guide and notes. Both guide layouts input script/supplements.tex, the single authoritative supplemental body. Do not maintain a second read-aloud manuscript. Follow [PDF compatibility](quality-checks.md#pdf-compatibility) for every requested PDF.
+Compile and finalize slides/report.tex first, including PDF font/mapping checks, then compile the requested guide layout. Both guide layouts input script/supplements.tex, the single authoritative supplemental body. Do not maintain a second read-aloud manuscript or generate a separate learning document. Follow [PDF compatibility](quality-checks.md#pdf-compatibility) for every requested PDF.
 
 The bundle must work with its own relative files and standard TeX packages. No original report folder, institutional logo, proprietary font file, humanizer installation, or external reference deck is required.
 
@@ -40,7 +39,7 @@ Cover hierarchy:
 
 Do not infer a presenter from a source, sample, account, old report, or file owner. Ask for the current report's name/identifier if absent and continue independent work. An unfilled presenter is explicitly pending in the draft handoff.
 
-## Slides, script, and notes responsibilities
+## Slides and script responsibilities
 
 Use [content integrity and selection](paper-analysis.md#content-integrity-and-selection) to decide what may be shortened and what must remain visible. The artifacts serve different purposes:
 
@@ -48,11 +47,10 @@ Use [content integrity and selection](paper-analysis.md#content-integrity-and-se
 |---|---|
 | Slides | Present the claims, complete selected formal statements, and source-specific foundations needed to interpret current and subsequent pages. |
 | Speaker script | Explain the visible content, the meaning and role of conditions, the reasoning being taught, and the connections between pages. |
-| Study notes | Develop deeper background, full proofs, optional branches, preparation decisions, and source verification for the presenter. |
 
-Write and verify the required slide content before relying on the script's explanations. A complete spoken explanation does not repair an incomplete displayed statement, and detailed notes do not establish listener knowledge. Necessary repetition across slides and speech is welcome when it helps the audience follow the argument.
+Write and verify the required slide content before relying on the script's explanations. A complete spoken explanation does not repair an incomplete displayed statement, and private preparation does not establish listener knowledge. Necessary repetition across slides and speech is welcome when it helps the audience follow the argument.
 
-If a complete statement needs several slides, split it into readable, explicitly connected consecutive pages and keep the page map and script aligned. Do not offload its required parts to the script or notes to fit a layout.
+If a complete statement needs several slides, split it into readable, explicitly connected consecutive pages and keep the page map and script aligned. Do not offload its required parts to the script or conversation to fit a layout.
 
 ## Concrete slide defaults
 
@@ -66,9 +64,9 @@ Prohibit block, alertblock, and exampleblock environments in slide content, even
 
 Use a short noun phrase or verb phrase for each slide title, naming its main object, method, operation, or result category. Examples: “多元纵向数据的观测结构”, “统计目标与分析困难”, “一致性与估计误差速率”, “构造置信区间”. Reject full sentences, questions, and conclusion-like slogans: “持续查看数据，改变了需要控制的事件” becomes “持续监测下的覆盖事件”; “共享信息如何改善回归系数估计” becomes “回归系数的估计误差”. Sentence explanations belong in the body or script. Avoid preparation reminders such as “报告重点” or “本页讲解安排”. Use only the contents-page scheme below for an outline.
 
-Do not generate gray “来源：…” lines, small source strips, per-slide source footers, or helper macros that append them. Put page-specific source locations and detailed provenance in notes. Necessary author attribution, citation beside a borrowed claim, or licensed-figure credit can remain concise and in context; do not convert this into a repeated footer. Keep the existing cover attribution and template metadata separate from these prohibited source strips.
+Do not generate gray “来源：…” lines, small source strips, per-slide source footers, or helper macros that append them. Put page-specific source locations and detailed provenance in the source/page map. Necessary author attribution, citation beside a borrowed claim, or licensed-figure credit can remain concise and in context; do not convert this into a repeated footer. Keep the existing cover attribution and template metadata separate from these prohibited source strips.
 
-Resolve density through readable pagination or selection under the content-integrity rules before shrinking text. Retained statements and foundations must remain complete and legible. Avoid overlays unless the task requires them. A references display page is optional; traceable source records remain in notes.
+Resolve density through readable pagination or selection under the content-integrity rules before shrinking text. Retained statements and foundations must remain complete and legible. Avoid overlays unless the task requires them. A references display page is optional; traceable source records remain in the source/page map.
 
 ### One contents-page scheme
 
@@ -101,7 +99,7 @@ These are checkpoints, not mandatory five-part paragraphs. Follow the slide and 
 
 Write the actual explanation. "强调创新", "解释图形", and "这里补充一个例子" are preparation instructions. Explain the source content itself or keep the reminder outside the spoken body; a reminder to add an example does not authorize inventing one.
 
-Once the slide statement is complete, add the reasoning and interpretation needed for the agreed audience. Put nonessential proof detail and optional branches in clearly marked backup or preparation notes. When a new topic lacks required visible foundations, repair the slides within the authorized scope instead of explaining the omission away in the script.
+Once the slide statement is complete, add the reasoning and interpretation needed for the agreed audience. Omit nonessential proof detail from the main talk or retain it in explicitly selected backup slides; discuss deeper questions in conversation when asked. When a new topic lacks required visible foundations, repair the slides within the authorized scope instead of explaining the omission away in the script.
 
 ### Guide layout
 
@@ -113,19 +111,19 @@ Use the ReportSlide environment in supplements.tex with displayed number, physic
 
 The text-only root uses the same supplements with 11pt type, bold slide-number labels, and compact readable spacing. It suppresses embedded slides and timing metadata. Avoid orphan labels and awkward splits; preserve mathematical content and wording unless editing is requested.
 
-## Preparation notes and language layers
+## Work records and language layers
 
-Apply the [artifact responsibilities](#slides-script-and-notes-responsibilities) above. Preparation notes may contain source checks, editorial choices, reminders, timing decisions, and optional answers; none substitutes for required audience-facing content.
+Apply the [artifact responsibilities](#slides-and-script-responsibilities) above. Keep source verification, settled decisions, and timing metadata in the existing source/page map or brief conversation records. These support production and continuity; do not expand them into a separate study guide or automatically saved Q&A document.
 
-Keep these layers distinct using [language-review.md](language-review.md). Preserve true qualifications; avoid inserting each unresolved editorial concern as a generic audience-facing disclaimer.
+Use [learning through dialogue](report-dialogue.md#learning-through-dialogue) for conceptual explanations and derivations. Save selected discussion content only when explicitly requested. Preserve users' existing supplementary files; removing a default output does not authorize deleting their work.
 
-The notes support the presenter's deeper understanding rather than duplicating the guide or serving only as a task checklist. Include relevant definitions, design choices, alternative explanations, computations, and background. Cross-reference stable slide identities and sources; do not require a model, theorem, or simulation section in every report.
+Keep audience-facing text, speech, and editorial records distinct using [language-review.md](language-review.md). Preserve true qualifications; avoid inserting each unresolved editorial concern as a generic audience-facing disclaimer.
 
 ## Mapping, terminology, and timing
 
 Use one authoritative page map with stable identity, displayed number/title, physical slide-PDF page, supplement, source location, and planned time. Include the prerequisite and statement-coverage fields from the [source map](paper-analysis.md#build-a-compact-source-map) in that same record. Existing project metadata is enough; no extra configuration framework is needed.
 
-Maintain terminology across headings, navigation, slide content, supplements, notes, and exports within the edit scope. Protect source titles and unrelated files during replacements.
+Maintain terminology across headings, navigation, slide content, supplements, and exports within the edit scope. Protect source titles and unrelated files during replacements.
 
 Count visible content, supplements, navigation, transitions, pauses, and live derivations. Reserve practical slack; around ten percent is an adjustable starting point. Mark optional backup separately.
 

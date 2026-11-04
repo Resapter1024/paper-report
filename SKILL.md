@@ -1,11 +1,13 @@
 ---
 name: paper-report
-description: Plan, draft, polish, run a language-only check, export, or prepare audience questions for an academic presentation from a paper, self-authored report, or course materials. Includes a portable Beamer style, planning questions, paired slide-and-speech examples, speaker scripts, and study notes.
+description: Plan, draft, polish, run a language-only check, export, or prepare audience questions for an academic presentation from a paper, self-authored report, or course materials. Includes a portable Beamer style, planning questions, paired slide-and-speech examples, speaker scripts, and learning through revision and dialogue.
+metadata:
+  version: "ver0.1.0"
 ---
 
 # Paper and Research Report
 
-Prepare a presentation the audience can understand without reading its source. A full package has report (slides for display), script (a slide-aligned speaker script, 讲稿), and notes (study notes developing the concepts and reasoning behind both). The guide replaces a separate read-aloud manuscript. For a narrow request, produce only the requested work.
+Prepare a presentation the audience can understand without reading its source. The deliverables are report (slides for display) and script (a slide-aligned speaker script, 讲稿). The guide replaces a separate read-aloud manuscript. For a narrow request, produce only the requested work. Do not automatically generate a separate study document or question log.
 
 Use drafting, revision, and rehearsal to help the presenter learn the material and deepen their understanding. Deliver a usable, checked draft, then refine report and script through the user's questions and practice; do not promise a flawless finished talk in one generation.
 
@@ -29,17 +31,17 @@ Dispatch check and questions directly to their own references and stop after tha
 ## Essential rules
 
 - Identify paper explanation, the user's own research, course investigation, or proposal. Do not force a published-paper structure or novelty claim onto every report.
-- Follow [content integrity and selection](references/paper-analysis.md#content-integrity-and-selection) for all content decisions. Equivalent wording, explanation depth, and pagination are adjustable; mathematical meaning and prerequisites of retained material are protected. Complete statements of selected formal results belong on slides, not only in the script or notes.
+- Follow [content integrity and selection](references/paper-analysis.md#content-integrity-and-selection) for all content decisions. Equivalent wording, explanation depth, and pagination are adjustable; mathematical meaning and prerequisites of retained material are protected. Complete statements of selected formal results belong on slides, not only in the script or conversation.
 - Preserve the source's main narrative order. Expand referenced definitions and conditions where first needed, including those stated elsewhere in the source; this explains the current argument without relocating later arguments or creating a new opening. Reordering the main argument requires a specific user request.
-- Use the source's own examples in their original context. Do not invent a motivating scenario, toy example, data, or special parameter case for the slides or paired script unless the user specifically requests it. Style samples and template placeholders do not grant that permission. Keep extra learning illustrations in conversation/notes and label their origin.
+- Use the source's own examples in their original context. Do not invent a motivating scenario, toy example, data, or special parameter case for the slides or paired script unless the user specifically requests it. Style samples and template placeholders do not grant that permission. Keep extra learning illustrations in conversation and label their origin.
 - Use a noun phrase or verb phrase naming each slide's main object or operation as its title. Do not use full sentences, questions, or conclusion-like slogans as titles.
 - Select depth by the report's purpose: keep supporting simulations and applications brief in a method-focused talk, and preserve central design and findings in empirical work. Apply the content-integrity rules when shortening either.
 - Assume only the agreed prerequisites and what earlier slides and speech have introduced. Do not assume familiarity with the source's notation, conditions, definitions, or argument; establish foundations before dependent content.
 - Use an explicitly required template. Otherwise use the bundled successful layout; no external reference deck is required. Prohibit block, alertblock, and exampleblock environments in slide content.
 - Put the clickable contents page on physical PDF page 2, immediately after the cover, and reuse that same section list at each later section opening with the current section highlighted. Use one automatic section hook; do not add separate agendas, roadmaps, section summaries, or other contents-like panels/pages.
-- Center the content group vertically within the slide body, keeping paragraphs left-aligned. Do not add gray “来源：…” lines, source strips, or repeated source footers. Keep detailed provenance in notes; retain necessary attribution in context rather than appending it to every slide.
+- Center the content group vertically within the slide body, keeping paragraphs left-aligned. Do not add gray “来源：…” lines, source strips, or repeated source footers. Keep detailed provenance in the source/page map; retain necessary attribution in context rather than appending it to every slide.
 - Obtain the presenter from the user for this report. Keep an empty field or a visible draft placeholder until supplied; never copy identity from a sample, source author, account, or old project. Other work can proceed while this field is pending.
-- Keep audience-facing content, actual spoken supplements, and preparation instructions distinct. Place editorial reminders and audit findings in preparation material or the review response.
+- Keep audience-facing content, actual spoken supplements, and preparation instructions distinct. Place editorial reminders and audit findings in the response or existing brief work records, without creating a third deliverable.
 - Preserve attribution and important qualifications. Replace unnecessary defensive disclaimers with precise scoped statements; do not erase real limits or unfinished work.
 - Maintain enough explanation to be understood. Avoiding repetition or AI-like prose is not permission to turn the guide into a terse outline.
 
@@ -57,7 +59,7 @@ Propose a central message, supported contributions or findings, a source-ordered
 
 ### 2. Start from the usable assets
 
-For a new project without an overriding template, copy the contents of [assets/starter](assets/starter/report-metadata.tex) into the output project. The bundle contains a standalone Beamer theme and cover, both guide layouts using one supplement source, and a preparation-note starter.
+For a new project without an overriding template, copy the contents of [assets/starter](assets/starter/report-metadata.tex) into the output project. The bundle contains a standalone Beamer theme and cover, and both guide layouts using one supplement source.
 
 Fill report metadata from current inputs. Optional English title, source attribution, course information, and background image remain optional. Keep institution branding separate from layout. Never depend on the original longitudinal-data report's path.
 
@@ -65,7 +67,7 @@ When a supplied template fixes the cover, use it. Otherwise adapt [report-cover.
 
 ### 3. Write the slides and speaker script together
 
-Follow the [artifact responsibilities](references/deliverables.md#slides-script-and-notes-responsibilities). Write complete visible statements and required foundations on slides first, then write the speech that explains and connects them. The style excerpts guide expression, not the permitted completeness of a new slide sequence.
+Follow the [artifact responsibilities](references/deliverables.md#slides-and-script-responsibilities). Write complete visible statements and required foundations on slides first, then write the speech that explains and connects them. The style excerpts guide expression, not the permitted completeness of a new slide sequence.
 
 For each page, check what the audience has learned so far, explain the current objects and reasoning, and connect to the next step. Choose explanatory depth by page type; the script must not compensate for a missing formal statement on the slide.
 
@@ -75,7 +77,7 @@ Keep one page map distinguishing displayed numbers from physical PDF pages. Main
 
 Apply the language-review process after a new draft and during polish. Use the installed humanizer skill when available, adapted to Chinese oral presentation and speaker identity; the bundled rules remain sufficient when it is unavailable.
 
-Read the slide, supplement, relevant note, and source before answering a conceptual page question. Verify suggested mathematical corrections. A request for explanation is not automatically a request to edit files.
+Read the slide, supplement, and relevant source before answering a conceptual page question. Use [learning through dialogue](references/report-dialogue.md#learning-through-dialogue) to explain unfamiliar concepts and reasoning at the user's actual point of difficulty. Verify suggested mathematical corrections. A request for explanation is not automatically a request to edit files.
 
 For authorized edits, preserve unaffected content and review boundaries. Update affected terminology, maps, timings, cross-references, and embedded slides. Do not insert every technical concern as an audience-facing disclaimer.
 

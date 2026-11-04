@@ -109,6 +109,6 @@ Author context: pair this sample with the actual source error plot. This is an a
 
 ## How to use these pairs
 
-Use the excerpts for explanatory depth, necessary repetition, and natural connectives. For the division of content between complete slides and their explanation, follow the [artifact responsibilities](deliverables.md#slides-script-and-notes-responsibilities). The script is not a separate manuscript or a place to hide missing slide content.
+Use the excerpts for explanatory depth, necessary repetition, and natural connectives. For the division of content between complete slides and their explanation, follow the [artifact responsibilities](deliverables.md#slides-and-script-responsibilities). The script is not a separate manuscript or a place to hide missing slide content.
 
 For each new page, apply the relevant explanation pattern to the source content at that point. Do not use these pairs as an alternative talk sequence or mechanically reproduce their transitions. For empirical work, apply the same care to variables, design choices, evidence, and interpretation even when no formula or algorithm is needed.

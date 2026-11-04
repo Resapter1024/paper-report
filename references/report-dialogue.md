@@ -1,6 +1,6 @@
 # Co-developing the report through dialogue
 
-Use this reference for plan, at the beginning of a new report, or when draft pages reveal a substantive narrative choice. This is a focused conversation about the report, not a fixed questionnaire or a dependency on another skill.
+Use this reference for plan, at the beginning of a new report, when draft pages reveal a substantive narrative choice, or for conceptual questions during refinement. This is a focused conversation about the report, not a fixed questionnaire or a dependency on another skill.
 
 ## Stage 1: Establish the constraints
 
@@ -55,15 +55,23 @@ Useful discussion includes:
 - Whether a particular derivation should be delivered live or explained through its key step.
 - Whether a displayed result actually supports the central claim.
 - Whether an unfamiliar term or condition has a sufficient visible introduction before its first use.
-- Whether the presenter needs a fuller explanation in preparation notes before using a shorter oral version.
+- Whether the presenter needs a fuller explanation in conversation before using a shorter oral version.
 - Which optional material can be removed without breaking the remaining content's prerequisites when the time budget is exceeded.
 
 Prefer resolving routine wording and layout issues independently. Ask when the answer changes depth, emphasis, required content, or the presenter's ability to explain the argument.
 
 A question about understanding does not automatically authorize edits. If the user asks for an explanation, answer it; if they request a revision, incorporate the relevant content within that scope.
 
+## Learning through dialogue
+
+Address the user's actual question using the relevant source passage and current report page. Establish what the objects are and what the question asks, then explain the needed definitions, symbols, conditions, intermediate steps, and conclusion. For a derivation, make clear why each consequential step follows. Choose depth from the user's difficulty rather than compressing the answer into a short theoretical summary.
+
+Use the agreed background and prior discussion without assuming the user has understood every source-specific term. If an explanation remains unclear, locate the unresolved step and change the explanation path instead of repeating it in shorter form. Distinguish the source's claims from interpretation and verify consequential mathematical statements against the source. Apply the existing example boundaries when moving any explanation into slides or speech.
+
+Keep this learning in the conversation. Do not automatically write study documents, summaries of all questions, or extra PDFs. Save selected explanations only when the user asks, retaining the detail needed for later understanding. A learning question alone does not authorize changing report or script.
+
 ## Keep the conversation lightweight
 
-Retain the user's decisions, prerequisite knowledge, required introductions, and intended listener takeaways in existing project notes or the page map rather than creating a separate questionnaire document. Carry them across turns and do not reopen settled choices after an authorized revision.
+Retain the user's decisions, prerequisite knowledge, required introductions, and intended listener takeaways in the existing page map or brief conversation record rather than creating a separate document. Carry them across turns and do not reopen settled choices after an authorized revision.
 
 For a narrow revision or export of an existing report, do not restart intake or reopen a settled narrative. Apply only the parts of this process relevant to the change.
