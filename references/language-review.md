@@ -29,10 +29,14 @@ An optional detector can flag passages, but a score or isolated keyword is not e
 - Preserve precise technical vocabulary, necessary repetition, symbol introductions, numbers, citations, equations, and conditions.
 - Retain the presenter's role. "作者发现" or "本文的结果" may suit a paper explanation; "我们发现" requires that the finding belongs to the presenter's study.
 - Remove decorative emphasis and inflated certainty. Do not automatically strengthen "相关" to "影响", "显示" to "证明", or numerical differences to statistically significant effects.
-- Prefer ordinary punctuation to chains of parenthetical asides. Keep conventional Chinese punctuation and mathematical notation; do not mechanically apply English typography rules.
+- Prefer ordinary punctuation to chains of parenthetical asides. Keep conventional Chinese punctuation; do not mechanically apply English typography rules.
 - Remove chat residue and generic praise. Audit commentary stays in the review response, not in the deck or guide.
 
 Humanizing changes expression, not the coverage, scientific examples, or order of the explanation. Preserve the existing steps and the source's conditions.
+
+### Mathematical notation
+
+讲稿与 slides 保持一致的数学记号，包括希腊字母、大小写、上下标和估计符号。口语化只调整句子表达，不将数学符号替换为中文音译。
 
 ## Three language layers
 

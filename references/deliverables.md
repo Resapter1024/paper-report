@@ -78,7 +78,7 @@ Navigation-only pages use no substantive slide number by default. Keep physical 
 
 ## Speaker script: actual supplemental speech
 
-The default guide is a slide above a coherent spoken supplement. It supplies the actual speech needed to explain that slide under the artifact responsibilities above.
+The default guide is a slide above a coherent spoken supplement. It supplies the actual speech needed to explain that slide under the artifact responsibilities above. Follow the [mathematical notation rule](language-review.md#mathematical-notation) for written symbols.
 
 Assume listeners know only the agreed prerequisites and what the report has already introduced. At each page, establish why the current content is needed, how it follows from earlier content, and what it enables next. Explain source-specific objects, terminology, conditioning, and required intermediate reasoning directly.
 
