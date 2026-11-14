@@ -1,0 +1,44 @@
+% !TeX program = xelatex
+\documentclass[c,11pt,aspectratio=43]{beamer}
+\input{../report-metadata.tex}
+\usepackage{report-style}
+\title[\ReportShortTitle]{\ReportTitle}
+\subtitle{\ReportEnglishTitle}
+\author[\ReportSourceAuthors]{\ReportPresenterDisplay}
+\institute[\ReportShortContext]{\ReportContext}
+\date{\ReportDate}
+\begin{document}
+\begin{frame}[c]\titlepage\end{frame}
+
+% The first section must immediately follow the cover: its hook makes PDF page 2
+% the clickable contents page. Do not add another outline or contents frame.
+% Layout slots only: replace with actual source content in its narrative order.
+% Do not turn these placeholders into a new motivating example.
+\section{原文第一节（占位）}
+\begin{frame}[c]{原文概念（排版占位）}
+{\color{reportaccent}\bfseries 原文对象与定义}
+
+待从原文对应位置填入对象、符号和定义，保留原有引入顺序。
+\[
+\underbrace{\cdots}_{\text{原文公式占位}}
+\]
+本页仅演示文字与公式的位置，不提供研究内容或自创例子。
+\end{frame}
+
+\section{原文后续节（占位）}
+\begin{frame}[c]{原文结果（排版占位）}
+待从原文对应位置填入指标、比较对象与结果。
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{ccc}
+\toprule
+原文指标 & 原文比较对象 & 原文结果\\
+\midrule
+待填 & 待填 & 待填\\
+\bottomrule
+\end{tabular}
+\end{center}
+\medskip
+本页仅演示表格排版，不代表任何研究结论。
+\end{frame}
+\end{document}
