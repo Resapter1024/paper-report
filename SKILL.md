@@ -2,7 +2,7 @@
 name: paper-report
 description: Plan, draft, polish, run a language-only check, export, or prepare audience questions for an academic presentation from a paper, self-authored report, or course materials. Includes a portable Beamer style, planning questions, paired slide-and-speech examples, speaker scripts, and learning through revision and dialogue.
 metadata:
-  version: "ver0.1.0"
+  version: "ver0.1.1"
 ---
 
 # Paper and Research Report
@@ -35,14 +35,18 @@ Dispatch check and questions directly to their own references and stop after tha
 - Preserve the source's main narrative order. Expand referenced definitions and conditions where first needed, including those stated elsewhere in the source; this explains the current argument without relocating later arguments or creating a new opening. Reordering the main argument requires a specific user request.
 - Use the source's own examples in their original context. Do not invent a motivating scenario, toy example, data, or special parameter case for the slides or paired script unless the user specifically requests it. Style samples and template placeholders do not grant that permission. Keep extra learning illustrations in conversation and label their origin.
 - Use a noun phrase or verb phrase naming each slide's main object or operation as its title. Do not use full sentences, questions, or conclusion-like slogans as titles.
+- Apply the [Chinese wording defaults](references/language-review.md#chinese-wording-and-reference-defaults) to headings, formal-result labels, references, abbreviations, and numeric values. Treat them as user defaults subject to the current brief, not a ban on meaningful words or mathematical punctuation.
 - Select depth by the report's purpose: keep supporting simulations and applications brief in a method-focused talk, and preserve central design and findings in empirical work. Apply the content-integrity rules when shortening either.
+- When both simulation and empirical/application results are present, group them in one main section (for example, “模拟与实证”); give conclusions their own final main section (“结论”). Preserve source order within the combined evidence section. Do not create absent evidence types just to fill the structure. This is the user’s default section preference; explicit requirements for the current report take precedence.
 - Assume only the agreed prerequisites and what earlier slides and speech have introduced. Do not assume familiarity with the source's notation, conditions, definitions, or argument; establish foundations before dependent content.
 - Use an explicitly required template. Otherwise use the bundled successful layout; no external reference deck is required. Prohibit block, alertblock, and exampleblock environments in slide content.
 - Put the clickable contents page on physical PDF page 2, immediately after the cover, and reuse that same section list at each later section opening with the current section highlighted. Use one automatic section hook; do not add separate agendas, roadmaps, section summaries, or other contents-like panels/pages.
 - Center the content group vertically within the slide body, keeping paragraphs left-aligned. Do not add gray “来源：…” lines, source strips, or repeated source footers. Keep detailed provenance in the source/page map; retain necessary attribution in context rather than appending it to every slide.
+- Center standalone tables and place small captions close to their figures/tables, centered on the corresponding visual. Keep numerical examples and their interpretation left-aligned as body content; see [figure and table layout](references/deliverables.md#figures-tables-and-captions).
 - Obtain the presenter from the user for this report. Keep an empty field or a visible draft placeholder until supplied; never copy identity from a sample, source author, account, or old project. Other work can proceed while this field is pending.
 - Keep audience-facing content, actual spoken supplements, and preparation instructions distinct. Place editorial reminders and audit findings in the response or existing brief work records, without creating a third deliverable.
 - Preserve attribution and important qualifications. Replace unnecessary defensive disclaimers with precise scoped statements; do not erase real limits or unfinished work.
+- Organize the explanation around the source's supported contribution, mechanism, and evidence. Let conclusions reinforce established findings; retain substantive assumptions and adverse results rather than turning confident wording into selective reporting. See [defensive language versus necessary limits](references/language-review.md#unnecessary-defensive-language-versus-necessary-limits).
 - Maintain enough explanation to be understood. Avoiding repetition or AI-like prose is not permission to turn the guide into a terse outline.
 
 ## Workflow
@@ -61,7 +65,7 @@ Propose a central message, supported contributions or findings, a source-ordered
 
 For a new project without an overriding template, copy the contents of [assets/starter](assets/starter/report-metadata.tex) into the output project. The bundle contains a standalone Beamer theme and cover, and both guide layouts using one supplement source.
 
-Fill report metadata from current inputs. Optional English title, source attribution, course information, and background image remain optional. Keep institution branding separate from layout. Never depend on the original longitudinal-data report's path.
+Fill report metadata from current inputs. Use the cover hierarchy in deliverables.md: title band, one line of source authors and publication, presenter, report context, then report date. Context and date use the same font size; show values without field labels. Keep publication/year separate from report date. When revising a cover, preserve the title-band content unless the user requests changes. Optional English title, source attribution, course information, and background image remain optional. Keep institution branding separate from layout. Never depend on the original longitudinal-data report's path.
 
 When a supplied template fixes the cover, use it. Otherwise adapt [report-cover.tex](assets/starter/slides/report-cover.tex) to retain the bundled title hierarchy without replacing the rest of the user's theme. Detailed precedence and copy instructions are in deliverables.md.
 
@@ -79,7 +83,7 @@ Apply the language-review process after a new draft and during polish. Use the i
 
 Read the slide, supplement, and relevant source before answering a conceptual page question. Use [learning through dialogue](references/report-dialogue.md#learning-through-dialogue) to explain unfamiliar concepts and reasoning at the user's actual point of difficulty. Verify suggested mathematical corrections. A request for explanation is not automatically a request to edit files.
 
-For authorized edits, preserve unaffected content and review boundaries. Update affected terminology, maps, timings, cross-references, and embedded slides. Do not insert every technical concern as an audience-facing disclaimer.
+For authorized edits, preserve unaffected content and review boundaries. A comment on a guide's embedded slide normally requires editing the slide source and rebuilding the guide. Update affected terminology, maps, timings, cross-references, and embedded slides; inspect nearby text after a wording change. Do not insert every technical concern as an audience-facing disclaimer.
 
 ### 5. Verify and deliver
 
