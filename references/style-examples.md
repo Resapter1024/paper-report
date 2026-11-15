@@ -8,7 +8,7 @@ Borrow the explanation style while following the new source's narrative order. T
 
 ### Slide content
 
-**个体差异与共享潜变量**
+**共享潜变量**
 
 基线、收入和家庭规模解释了一部分购买差异。剩余差异仍可能在多个商品和多个时期反复出现。
 
@@ -30,11 +30,11 @@ Borrow the explanation style while following the new source's narrative order. T
 
 ### Slide content
 
-**联合估计潜变量与模型参数**
+**联合估计**
 
-传统边际对数似然：先对每个个体的条件似然关于潜变量分布积分，再取对数并求和。
+传统边际对数似然先对每个个体的条件似然关于潜变量分布积分，再取对数并求和。
 
-联合估计目标：保留每个个体的潜变量取值，将各个体的条件对数似然相加，与结构参数一起优化。
+联合估计目标保留每个个体的潜变量取值，将各个体的条件对数似然相加，与结构参数一起优化。
 
 ### Spoken supplement
 
@@ -61,7 +61,7 @@ When the formulas themselves are needed, show the corresponding steps:
 
 ### Slide content
 
-**结局参数与个体特征的交替更新**
+**交替更新结局参数和个体特征**
 
 先固定当前的个体特征，逐商品更新基线、协变量系数和商品系数。
 
@@ -89,9 +89,9 @@ Author context: pair this sample with the actual source error plot. This is an a
 
 ### Slide content
 
-**回归系数的估计误差**
+**回归系数估计误差**
 
-横轴：结局数 J，同时取 N=10J。纵轴：回归系数矩阵的归一化误差。两个面板分别对应真实潜变量维数3和8。
+横轴为结局数 J，同时取 N=10J；纵轴为回归系数矩阵的归一化误差。两个面板分别对应真实潜变量维数3和8。
 
 ### Spoken supplement
 
@@ -99,7 +99,7 @@ Author context: pair this sample with the actual source error plot. This is an a
 
 逐结局随机截距模型能够表示某个家庭在一个商品上的长期偏好，但拟合这个商品时，没有利用该家庭对其他商品的购买记录。
 
-本文中，同一个家庭的 theta_i 出现在所有商品的模型里。估计它时，可以汇总各商品的可见记录；估计某个商品的回归系数时，再使用这组共同估计的特征。模拟中每人只有四期记录，部分期次还缺失，其他商品就为估计这个家庭的特征提供了额外信息。
+本文中，同一个家庭的 theta_i 出现在所有商品的模型里。估计它时，可以汇总各商品的可见记录；估计某个商品的回归系数时，再使用这组共同估计的特征。模拟中每人只有4期记录，部分期次还缺失，其他商品就为估计这个家庭的特征提供了额外信息。
 
 结局较多时，图中本文方法的误差低于逐结局随机截距模型。例如右图 J=400 时，两者误差分别为0.18和0.238，相对降低约24%。在这些模拟设置中，多个结局共同帮助估计个人特征，与回归系数估计的改善相一致。
 

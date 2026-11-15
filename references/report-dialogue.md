@@ -60,11 +60,11 @@ Useful discussion includes:
 
 Prefer resolving routine wording and layout issues independently. Ask when the answer changes depth, emphasis, required content, or the presenter's ability to explain the argument.
 
-A question about understanding does not automatically authorize edits. If the user asks for an explanation, answer it; if they request a revision, incorporate the relevant content within that scope.
+A question about understanding does not automatically authorize edits. If the user asks for an explanation, answer it; if they request a revision, incorporate the relevant content within that scope. A follow-up such as “修改这句表述” refers to the sentence already discussed: apply the agreed clarification and rebuild the affected artifact without restarting intake.
 
 ## Learning through dialogue
 
-Address the user's actual question using the relevant source passage and current report page. Establish what the objects are and what the question asks, then explain the needed definitions, symbols, conditions, intermediate steps, and conclusion. For a derivation, make clear why each consequential step follows. Choose depth from the user's difficulty rather than compressing the answer into a short theoretical summary.
+Address the user's actual question using the relevant source passage and current report page. Establish what the objects are and what the question asks, then explain the needed definitions, symbols, conditions, intermediate steps, and conclusion. Unpack vague metaphors or references by naming the actual population, settings, quantities, and comparison; propose a clear replacement sentence when useful. For a derivation, make clear why each consequential step follows. Choose depth from the user's difficulty rather than compressing the answer into a short theoretical summary.
 
 Use the agreed background and prior discussion without assuming the user has understood every source-specific term. If an explanation remains unclear, locate the unresolved step and change the explanation path instead of repeating it in shorter form. Distinguish the source's claims from interpretation and verify consequential mathematical statements against the source. Apply the existing example boundaries when moving any explanation into slides or speech.
 
