@@ -112,6 +112,23 @@ def check(pdf, output, embed=False):
             # pieces can be embedded without a textual Unicode counterpart.
             if re.search(r"\sCID\s", line[:match.start()]):
                 issues.append(f"Composite text font has no explicit ToUnicode map: {name}")
+    # Poppler can omit a composite font entirely when its Unicode map is absent.
+    # Inspect PDF resources too, including fonts nested in imported slide forms.
+    reader = PdfReader(pdf)
+    seen = set()
+    for page in reader.pages:
+        resources = page.get("/Resources")
+        if resources is None:
+            continue
+        for font in resource_fonts(resources, seen):
+            if font.get("/Subtype") != "/Type0" or "/ToUnicode" in font:
+                continue
+            name = str(font.get("/BaseFont", "unnamed")).lstrip("/")
+            if name not in fonts_without_tounicode:
+                fonts_without_tounicode.append(name)
+            issue = f"Composite text font has no explicit ToUnicode map: {name}"
+            if issue not in issues:
+                issues.append(issue)
     if not font_rows:
         issues.append("No text fonts found; an image-only PDF cannot prove searchable Chinese text.")
     poppler_text = run("pdftotext", "-enc", "UTF-8", "-layout", str(pdf), "-")
