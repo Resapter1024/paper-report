@@ -3,6 +3,8 @@
 \providecommand{\ReportPresenter}{}
 \providecommand{\ReportPresenterDisplay}{%
   \ifdefempty{\ReportPresenter}{\textcolor{gray}{报告人待填写}}{\ReportPresenter}}
+\providecommand{\ReportSourceAuthors}{}
+\providecommand{\ReportSourceLine}{}
 \setbeamertemplate{title page}{%
   \vbox{}\vfill
   \begin{beamercolorbox}[wd=\textwidth,sep=9pt,center]{title}
@@ -11,13 +13,20 @@
       \vskip.35em{\usebeamerfont{subtitle}\insertsubtitle\par}
     \fi
   \end{beamercolorbox}
-  \vskip1.1em
+  \vskip.65em
   \begin{center}
+    \ifboolexpr{not test {\ifdefempty{\ReportSourceAuthors}} or
+                not test {\ifdefempty{\ReportSourceLine}}}{%
+      {\small\ReportSourceAuthors%
+       \ifdefempty{\ReportSourceAuthors}{}{\ifdefempty{\ReportSourceLine}{}{\quad}}%
+       \ReportSourceLine\par}
+      \vskip.8em
+    }{}
     {\usebeamerfont{author}\ReportPresenterDisplay\par}
     \vskip.7em
     {\usebeamerfont{institute}\insertinstitute\par}
     \vskip1em
-    {\usebeamerfont{date}\insertdate\par}
+    {\usebeamerfont{institute}\insertdate\par}
   \end{center}
   \vfill
 }
