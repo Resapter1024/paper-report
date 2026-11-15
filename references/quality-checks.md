@@ -93,6 +93,10 @@ Use both complete render sets from the PDF compatibility procedure above, includ
 
 Verify readable type, no clipping or overlap, usable tables and equations, correct titles and metadata, and adherence to the supplied template. Confirm the contents is physical page 2, appears once at each later section opening, highlights the current section, and links to the correct section destinations. Reject extra agendas, route maps, subsection outlines, and other contents-like panels. Check that ordinary slide bodies are vertically centered and have no gray “来源：…” line or repeated source strip. Check that slide content does not use block, alertblock, or exampleblock.
 
+Check that standalone tables are centered; figure/table captions are small but readable, close to the visual, and centered on it; and numerical examples and their interpretation share the body left edge. Preserve the aspect ratio and legibility of imported plots, align comparable panels, and verify that body text leaves sufficient room before the footer. A line that became shorter after editing may need a new paragraph boundary to avoid a dangling one- or two-character ending.
+
+For targeted revisions, a recoverable prior version and source/render comparisons can identify the affected pages without reopening unrelated content. Regenerate both complete render sets. Inspect every changed page in both engines; previously reviewed pages may carry forward only when their rendered appearance is demonstrably identical, for example by matching page-image hashes. A PDF file hash or a clean source diff alone cannot establish this. If render comparison is unavailable or indicates wider changes, inspect those pages as well. Record the actual review scope rather than claiming a fresh full visual inspection.
+
 For the slide-and-supplement guide, verify that each embedded slide is the exact intended compiled page, remains legible, and has the correct supplement beneath it. For a text-only export, check slide-number labels, content preservation, and page breaks.
 
 ## Synchronization and edit scope
@@ -107,6 +111,10 @@ Use the page map and actual compiled PDFs to verify:
 - A targeted edit has not unintentionally changed protected content; use source comparisons or rendered comparisons when warranted.
 
 Pay attention to inserted pages, removed sections, automatically split frames, and title/author changes. Keep presenter metadata separate from source attribution.
+
+When a comment is attached to the guide, first distinguish the embedded slide from the spoken supplement. Edit the authoritative slide source for an embedded visual, then finalize that slide PDF and rebuild its dependent guide. For a speech-only change, rebuild the requested guide without gratuitously rewriting the deck. Check nearby sentences and positional references after the local edit. When asked to fix similar cases throughout the report, inspect the whole requested artifact for the same functional issue, rather than replacing every occurrence of a word.
+
+For wording-only edits, verify preservation of formal statements, values, units, precision, and qualifications. For example, replacing a metaphor about two settings must preserve the target population, the actual intervention contrast, and whether the estimand is a difference. Apply the language reference's formal-label and Arabic-numeral conventions while keeping source numbering and mathematical notation intact.
 
 ## Final handoff
 

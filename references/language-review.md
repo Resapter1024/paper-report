@@ -34,6 +34,20 @@ An optional detector can flag passages, but a score or isolated keyword is not e
 
 Humanizing changes expression, not the coverage, scientific examples, or order of the explanation. Preserve the existing steps and the source's conditions.
 
+## Chinese wording and reference defaults
+
+Use these defaults for Chinese reports unless the current brief requires otherwise. Preserve source titles and wording that carries a necessary technical distinction.
+
+- Vary noun-phrase and verb-phrase headings. Avoid repeatedly joining topics with “……与……” or relying on “……的……” throughout the hierarchy. The combined section “模拟与实证” remains the existing default. Do not mechanically remove useful conjunctions or modifiers.
+- Avoid routine “label＋冒号＋explanation” sentences in headings, slides, and speech. Use a direct title or connected sentence. Mathematical definitions, function mappings, null hypotheses, and conventional case notation keep their colons.
+- Label formal statements consistently as “定理 4（主题或条件）”, “推论 1（适用情形）”, or “假设 2（名称）”. Put the category and source number outside the parentheses; put supplementary information afterward inside them. Preserve the source's numbering, including when one result spans several slides.
+- Refer to assumptions, definitions, and results by their source number or object name, rather than “第几页”“见下一页” in audience-facing explanations. Keep displayed/physical page numbers in footers, guide labels, review comments, and the source/page map for navigation.
+- Refer to displayed visuals by their actual position, such as “上图”“左图”“上面两图”“上表”. Keep original figure/table numbers and detailed provenance in the source map; retain required attribution or licensed-figure credit. Update position words when layout changes.
+- Prefer an unambiguous source reference such as “本文”“原论文” over “主文” when no distinction between the main text and appendix is intended. Choose it consistently with the presenter's authorship role.
+- Write a short name in full when an abbreviation would otherwise need a separate expansion sentence: use “Bernoulli” directly instead of “Bern” followed by “Bern 表示 Bernoulli 分布”. Keep audience-familiar abbreviations, necessary symbol definitions, and labels needed to read an imported figure; do not expand every standard acronym mechanically.
+- Write quantitative values in Arabic numerals in the script as well as slides: decimals, percentages, fractions, signed values, sample sizes, repetitions, timepoints, folds, years, and multipliers. Preserve precision, units, signs, and qualifiers such as “约”“接近”. Keep normal terms and connective language such as “二元处理”“一阶”“二阶”“第一项”“同一个体”“某一折”.
+- Replace an unexplained metaphor with the actual objects, intervention/comparison, and outcome. For example, “两个世界” should identify the two hypothetical intervention settings and the population being compared. An effect defined as a difference must remain a difference, not just an unspecified comparison. Do not invent a scientific example to make the wording concrete.
+
 ### Mathematical notation
 
 讲稿与 slides 保持一致的数学记号，包括希腊字母、大小写、上下标和估计符号。口语化只调整句子表达，不将数学符号替换为中文音译。
@@ -51,6 +65,8 @@ A sentence about how the author should write or deliver the report is preparatio
 "接下来先看购买记录的结构" can be actual speech. "这里需要补充一个例子" is a preparation instruction; keep the reminder in the review response or explain an existing source example within the authorized edit. Do not invent an example to repair the wording.
 
 ## Unnecessary defensive language versus necessary limits
+
+Lead with the source's supported contribution and explain the mechanism and evidence that establish it. Replace repeated warnings or vague self-criticism with a concrete scoped statement. Keep a conclusion focused on the established question, method, findings, and significance; avoid introducing unrelated decision tasks or new criticism in its final sentences. This does not authorize changing the source's main order or removing a substantive result.
 
 Look for sentences such as "论文没有给出……", "论文不足以说明……", "不能据此认为……", and "这并不意味着……". Classify their function in context.
 
@@ -70,6 +86,8 @@ Examples, assuming the stated scoped result is supported:
 - "这一页不用讲太细，只需突出创新。" -> Preparation instruction. Supply the actual spoken explanation of the idea and omit the instruction from the guide body.
 
 Do not delete low coverage, null or adverse findings, selection bias, missing-data assumptions, local-optimum concerns, or incomplete analyses just because they qualify a result. Do not invent a positive conclusion to avoid a negative sentence.
+
+When anti-defensive-writing is requested, apply it within these scientific-content boundaries. Explain a specific misspecification result and its relation to the theory instead of repeating generic “校正不能消除任意错设” warnings. Explain saved computation, such as reusing fitted regressions, instead of adding an unmeasured claim like “便宜得多”. Necessary words such as “仅”, “仍需”, and “不能” are not a deletion blacklist: keep them when they express an actual restriction or prevent a likely misunderstanding. The review must improve emphasis and expression without concealing the evidence.
 
 ## Audit output
 
